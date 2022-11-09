@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="partner_profiles_form_view" model="ir.ui.view">
+            <field name="name">Partner Profiles Form View</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="sequence">99</field>
+            <field name="arch" type="xml">
+                <!-- Main display -->
+                <xpath expr="//group[@name='profile_status']" position="after">
+                    <group name="structure_access_rights" attrs="{'invisible': ['|', ('is_position_profile','=',False), ('parent_id','=',False)]}">
+                        <field name="edit_structure_main_profile" />
+                        <field name="edit_structure_public_profile" />
+                    </group>
+                </xpath>
+
+                <!-- page Contacts & Adresses -->
+                <xpath expr="//field[@name='child_ids']/form/sheet/group/group/field[@name='comment']" position="before">
+                    <field name="edit_structure_main_profile" attrs="{'invisible': [('is_position_profile','=',False)]}" />
+                    <field name="edit_structure_public_profile" attrs="{'invisible': [('is_position_profile','=',False)]}" />
+                </xpath>
+
+                <!-- page Other Positions -->
+                <xpath expr="//field[@name='other_contact_ids']/form/sheet/group/group/field[@name='parent_id']" position="after">
+                    <field name="edit_structure_main_profile" attrs="{'invisible': [('is_position_profile','=',False)]}" />
+                    <field name="edit_structure_public_profile" attrs="{'invisible': [('is_position_profile','=',False)]}" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
