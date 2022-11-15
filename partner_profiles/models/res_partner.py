@@ -135,6 +135,7 @@ class res_partner(models.Model):
                 "phone",
                 "mobile",
                 "email",
+                "website",
                 "street",
                 "street2",
                 "city",
