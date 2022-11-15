@@ -167,6 +167,11 @@ class res_partner(models.Model):
                 partner.create(values)
                 partner._compute_public_profile_id()
 
+    def _contact_fields(self):
+        """ Returns the list of contact fields that are synced from the parent
+        when a partner is attached to him. """
+        return ['title']
+
     ##################################################################################
     ## Planned actions
     ##################################################################################
