@@ -125,21 +125,26 @@ class res_partner(models.Model):
             return self[fname]
 
     def _get_public_profile_fields(self):
-        fields = [
-            "name",
-            "function",
-            "phone",
-            "mobile",
-            "email",
-            "street",
-            "street2",
-            "city",
-            "country_id",
-            "zip",
-            "is_company",
-            "lang",
-        ]
         # Return the fields to copy in the public profile when it is created.
+        # The data copied depend on the partner's type: we consider the company data as public,
+        # whereas the personal data shouldn't be public by default.
+        if self.is_company:
+            fields = [
+                "name",
+                "function",
+                "phone",
+                "mobile",
+                "email",
+                "street",
+                "street2",
+                "city",
+                "country_id",
+                "zip",
+                "is_company",
+                "lang",
+            ]
+        else:
+            fields = ["name"]
         return fields
 
     @api.multi
