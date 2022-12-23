@@ -39,6 +39,9 @@ class res_partner(models.Model):
         "other_contact_ids",
         "other_contact_ids.edit_structure_main_profile",
         "other_contact_ids.edit_structure_public_profile",
+        "child_ids",
+        "child_ids.edit_structure_main_profile",
+        "child_ids.edit_structure_public_profile",
     )
     def _compute_can_edit(self):
         for partner in self:

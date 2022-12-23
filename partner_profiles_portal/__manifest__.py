@@ -3,7 +3,7 @@
 
 {
     "name": "partner_profiles_portal",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "author": "Elabore",
     "website": "https://elabore.coop",
     "maintainer": "Stéphan Sainléger",
@@ -13,6 +13,7 @@
     # any module necessary for this one to work correctly
     "depends": [
         "base",
+        "partner_contact_in_several_companies",
         "partner_profiles",
         "portal",
         "website",
