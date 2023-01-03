@@ -19,6 +19,7 @@
                 <xpath expr="//field[@name='parent_id']" position="replace" />
                 <xpath expr="//field[@name='is_company']/.." position="after">
                     <group name="profile_data" class="bg-200">
+                        <field name="partner_profile" readonly="1" invisible="1" />
                         <field name="is_main_profile" readonly="1" invisible="1" />
                         <field name="is_public_profile" readonly="1" invisible="1" />
                         <field name="is_position_profile" readonly="1" invisible="1" />
