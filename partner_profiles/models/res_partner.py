@@ -22,7 +22,7 @@ class res_partner(models.Model):
     is_position_profile = fields.Boolean(
         compute="_compute_profile_booleans", store=True
     )
-    has_position = fields.Boolean(compute="_compute_profile_booleans", store=True)
+    has_position = fields.Boolean(compute="_compute_has_position", store=True)
 
     # If current partner is Main partner, this field indicates what its public profile is.
     public_profile_id = fields.Many2one(
@@ -50,6 +50,10 @@ class res_partner(models.Model):
             partner.is_position_profile = (
                 partner.partner_profile.ref == "partner_profile_position"
             )
+
+    @api.depends("other_contact_ids")
+    def _compute_has_position(self):
+        for partner in self:
             partner.has_position = len(partner.other_contact_ids) > 0
 
     @api.depends("partner_profile", "contact_id")
