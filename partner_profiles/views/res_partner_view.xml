@@ -10,8 +10,7 @@
                 <!-- ################### -->
                 <!-- MAIN DISPLAY UPDATE -->
                 <!-- ################### -->
-                <xpath expr="//field[@name='name']" position="replace">
-                    <field name="name" default_focus="1" placeholder="Administrative Name" required="True" widget="field_partner_autocomplete" />
+                <xpath expr="//field[@name='name']" position="after">
                     <p class="oe_read_only" style="font-size:small; font-style:italic"
                         attrs="{'invisible': [('is_main_profile','=',False)]}">Main Profile</p>
                     <p class="oe_read_only" style="font-size:small; font-style:italic"
