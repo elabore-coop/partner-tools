@@ -10,6 +10,7 @@ _logger = logging.getLogger(__name__)
 class res_partner(models.Model):
     _inherit = "res.partner"
 
+    to_migrate = fields.Boolean()
     partner_profile = fields.Many2one(
         "partner.profile",
         string="Partner profile",
@@ -83,13 +84,25 @@ class res_partner(models.Model):
     def create(self, vals):
         """Assume if not type, default is contact"""
         vals["type"] = vals.get("type", "contact")
+        profile_position = self.env.ref("partner_profiles.partner_profile_position").id
+        profile_main = self.env.ref("partner_profiles.partner_profile_main").id
         if vals["type"] == "contact":
             """When creating, if partner_profile is not defined by a previous process, the defaut value is Main"""
-            modified_self = self._basecontact_check_context("create")
-            if not vals.get("partner_profile") and not vals.get("contact_id"):
-                profile = self.env.ref("partner_profiles.partner_profile_main").read()[0]
-                vals["partner_profile"] = profile["id"]
-            res = super(res_partner, modified_self).create(vals)
+            if not vals.get("partner_profile"):
+                vals["partner_profile"] = profile_main
+            # If we create a partner type position search if one main exist (via email matching) else create one.
+            if vals["partner_profile"] == profile_position and not vals.get("contact_id"):
+                existing_main = self.env["res.partner"].search([('is_company', '=', False),('partner_profile', '=', profile_main),('email', '=', vals["email"])])      
+                if existing_main:
+                    vals["contact_id"] = existing_main.id
+                else:
+                    main_vals = vals.copy()
+                    main_vals["partner_profile"] = profile_main
+                    main_vals["parent_id"] = False
+                    main_res = super(res_partner, self).create(main_vals)
+                    main_res.create_public_profile()
+                    vals["contact_id"] = main_res.id
+            res = super(res_partner, self).create(vals)
             # Creation of the public profile
             if (
                 res.partner_profile.ref == "partner_profile_main" #TODO: replace by check on boolean is_main_profile ? Is this boolean computed at this step of the process?
@@ -101,8 +114,7 @@ class res_partner(models.Model):
                 res.customer = False
                 res.supplier = False
         else:
-            modified_self = self._basecontact_check_context("create")
-            res = super(res_partner, modified_self).create(vals)
+            res = super(res_partner, self).create(vals)
         return res
 
     @api.model
@@ -314,6 +326,7 @@ class res_partner(models.Model):
         )
         partners = self.env["res.partner"].search(search_values, limit=limit)
         _logger.debug("Person migration with parent_id - migration count: %s" % len(partners))
+
         count = 0
         for partner in partners:
             _logger.debug("count: [%s] : %s" % (count, partner.name))
