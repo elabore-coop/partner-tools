@@ -189,6 +189,15 @@ class res_partner(models.Model):
         when a partner is attached to him. """
         return ['title']
 
+    @api.model
+    def name_search(self, name='', args=None, operator='ilike', limit=100):
+        """ Remove public profile partners from the name_search results"""
+        if not args:
+            args = [("is_public_profile", "=", False)]
+        else:
+            args.append(("is_public_profile", "=", False))
+        return super(res_partner, self).name_search(name, args, operator, limit)
+
     ##################################################################################
     ## Planned actions
     ##################################################################################
