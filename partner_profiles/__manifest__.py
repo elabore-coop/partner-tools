@@ -14,6 +14,7 @@
     "depends": [
         "base",
         "calendar",
+        "contacts",
         "partner_contact_in_several_companies",
     ],
     "qweb": [
