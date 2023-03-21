@@ -3,7 +3,7 @@
 
 {
     "name": "partner_profiles",
-    "version": "12.0.1.0.5",
+    "version": "12.0.1.1.0",
     "author": "Elabore",
     "website": "https://elabore.coop",
     "maintainer": "Stéphan Sainléger",
@@ -27,7 +27,6 @@
     "data": [
         "security/ir.model.access.csv",
         "views/res_partner_view.xml",
-        "views/calendar_event_view.xml",
         "views/partner_profile_view.xml",
         "data/partner_profile_data.xml",
         "data/res_partner_data.xml",
