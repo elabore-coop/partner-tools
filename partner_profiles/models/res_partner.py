@@ -18,6 +18,7 @@ class res_partner(models.Model):
         translate=False,
         readonly=False,
     )
+    contact_id = fields.Many2one(ondelete="cascade")
     is_main_profile = fields.Boolean(compute="_compute_profile_booleans", store=True)
     is_public_profile = fields.Boolean(compute="_compute_profile_booleans", store=True)
     is_position_profile = fields.Boolean(
@@ -31,7 +32,6 @@ class res_partner(models.Model):
         compute="_compute_public_profile_id",
         string="Public profile",
         store=True,
-        ondelete="cascade",
     )
 
     # If current partner is Main partner, this field indicates what its position profiles are.
@@ -116,6 +116,16 @@ class res_partner(models.Model):
         else:
             res = super(res_partner, self).create(vals)
         return res
+
+    @api.multi
+    def unlink(self):
+        for partner in self:
+            if partner.is_company:
+                # Delete position profiles linked to the company main profile
+                child_ids = self.env["res.partner"].search([("parent_id", "=", partner.id), ("is_position_profile", "=", True)])
+                for child in child_ids:
+                        child.unlink()
+        return super(res_partner, self).unlink()
 
     @api.model
     def search_position_partners(self, profile):
