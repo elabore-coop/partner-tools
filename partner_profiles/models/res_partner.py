@@ -157,7 +157,6 @@ class res_partner(models.Model):
         if self.is_company:
             fields = [
                 "name",
-                "function",
                 "phone",
                 "mobile",
                 "email",
@@ -168,7 +167,6 @@ class res_partner(models.Model):
                 "country_id",
                 "zip",
                 "is_company",
-                "lang",
             ]
         else:
             fields = ["name"]
