@@ -3,7 +3,7 @@
 
 {
     "name": "partner_profiles_portal",
-    "version": "12.0.2.0.0",
+    "version": "12.0.2.1.0",
     "author": "Elabore",
     "website": "https://elabore.coop",
     "maintainer": "Stéphan Sainléger",
@@ -26,8 +26,8 @@
     "data": [
         "security/members_security.xml",
         "views/portal_home_template.xml",
-        "views/portal_my_profiles_template.xml",
-        "views/portal_partner_profile_template.xml",
+        "views/portal_my_structures_template.xml",
+        "views/portal_partner_structure_template.xml",
         "views/portal_my_account.xml",
         "views/res_partner_view.xml",
     ],

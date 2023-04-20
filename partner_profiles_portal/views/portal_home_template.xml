@@ -14,9 +14,10 @@
                             My information
                         </button>
                     </a>
-                    <a t-attf-href="/my/profiles">
+                    <br />
+                    <a t-attf-href="/my/structures">
                         <button class="btn btn-primary mb8">
-                            Consult my profiles
+                            My structures
                         </button>
                     </a>
                 </div>
