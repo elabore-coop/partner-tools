@@ -10,44 +10,37 @@ _logger = logging.getLogger(__name__)
 class res_partner(models.Model):
     _inherit = "res.partner"
 
-    edit_structure_main_profile = fields.Boolean(
-        string=_("Manage structure's main profile")
+    edit_structure_profiles = fields.Boolean(
+        string="Manage structure's profiles"
     )
-    edit_structure_public_profile = fields.Boolean(
-        string=_("Manage structure's public profile")
-    )
-    can_edit_main_profile_ids = fields.Many2many(
+    can_edit_structure_profiles_ids = fields.Many2many(
         "res.partner",
         relation="res_partner_main_profile_rel",
         column1="partner_id",
         column2="profile_id",
         store=True,
-        compute="_compute_can_edit",
-        string="Can edit main profile",
+        compute="_compute_can_read_edit",
+        string="Can edit struture profiles",
     )
-    can_edit_public_profile_ids = fields.Many2many(
+    child_main_contact_ids = fields.Many2many(
         "res.partner",
-        relation="res_partner_public_profile_rel",
+        relation="res_partner_child_contacts_rel",
         column1="partner_id",
         column2="profile_id",
         store=True,
-        compute="_compute_can_edit",
-        string="Can edit public profile",
+        compute="_compute_can_read_edit",
+        string="Can read structure profiles",
     )
 
     @api.depends(
         "other_contact_ids",
-        "other_contact_ids.edit_structure_main_profile",
-        "other_contact_ids.edit_structure_public_profile",
+        "other_contact_ids.edit_structure_profiles",
         "child_ids",
-        "child_ids.edit_structure_main_profile",
-        "child_ids.edit_structure_public_profile",
+        "child_ids.edit_structure_profiles",
     )
-    def _compute_can_edit(self):
+    def _compute_can_read_edit(self):
         for partner in self:
-            partner.can_edit_main_profile_ids = partner.child_ids.filtered(
-                "edit_structure_main_profile"
+            partner.can_edit_structure_profiles_ids = partner.child_ids.filtered(
+                "edit_structure_profiles"
             ).mapped("contact_id")
-            partner.can_edit_public_profile_ids = partner.child_ids.filtered(
-                "edit_structure_public_profile"
-            ).mapped("contact_id")
+            partner.child_main_contact_ids = partner.child_ids.mapped("contact_id")
