@@ -31,6 +31,12 @@ class res_partner(models.Model):
         compute="_compute_can_read_edit",
         string="Can read structure profiles",
     )
+    odoo_user_id = fields.Many2one(
+        "res.users",
+        compute="_compute_odoo_user_id",
+        string="Associated Odoo user",
+        store=True,
+    )
 
     @api.depends(
         "other_contact_ids",
@@ -44,3 +50,10 @@ class res_partner(models.Model):
                 "edit_structure_profiles"
             ).mapped("contact_id")
             partner.child_main_contact_ids = partner.child_ids.mapped("contact_id")
+
+    @api.depends("user_ids")
+    def _compute_odoo_user_id(self):
+        for partner in self:
+            partner.odoo_user_id = self.env["res.users"].search(
+                [("partner_id", "=", partner.id)], limit=1
+            )
