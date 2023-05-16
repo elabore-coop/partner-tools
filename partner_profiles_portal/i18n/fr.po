@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-03 10:08+0000\n"
-"PO-Revision-Date: 2023-01-03 10:08+0000\n"
+"POT-Creation-Date: 2023-05-16 12:33+0000\n"
+"PO-Revision-Date: 2023-05-16 12:33+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,92 +16,85 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profiles
-msgid "<b>Main profiles :</b>\n"
-"                internal and private profiles, used for membership management and internal communication.\n"
-"                <br/>\n"
-"                <b>Public profiles :</b>\n"
-"                profiles that might be available to tierce applications (annuary for instance)."
-msgstr "<b>Profils Principaux :</b>\n"
-"                Profils internes et privés, utilisés pour la gestion des adhésions et la communication interne.\n"
-"                <br/>\n"
-"                <b>Profils Publics :</b>\n"
-"                Profils diffusés à des applications tierces (annuaire, porte-monnaie électronique ou cartographie par exemple)."
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "<i class=\"fa fa-fw fa-check-circle\"/> Data saved!"
+msgstr "<i class=\"fa fa-fw fa-check-circle\"/> Données enregistrées!"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profiles
-msgid "<b>Public profile :</b>\n"
-"                profiles that might be available to tierce applications (annuary for instance).\n"
-"                <br/>\n"
-"                <b>Position profiles :</b>\n"
-"                profiles that indicate your belonging to an organization, and the role you have in."
-msgstr "<b>Profils Publics :</b>\n"
-"                Profils diffusés à des applications tierces (annuaire, porte-monnaie électronique ou cartographie par exemple).\n"
-"                <br/>\n"
-"                <b>Profils Position :</b>\n"
-"                Profils qui indiquent votre appartenance à une organisation, et votre rôle dans cette dernière."
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "<i>Current logo/picture:</i>"
+msgstr "<i>Logo/image actuel :</i>"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
-msgid "<br/>\n"
-"                                        Contact information"
-msgstr "<br/>\n"
-"                                        Informations de contact"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "<i>Current logo:</i>"
+msgstr "<i>Logo actuel :</i>"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
-msgid "<br/>\n"
-"                                        Job position"
-msgstr "<br/>\n"
-"                                        Poste occupé"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "<i>New logo/picture:</i>"
+msgstr "<i>Nouveau logo/image :</i>"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profiles
-msgid "<br/>\n"
-"                My organizations' profiles"
-msgstr "<br/>\n"
-"                Mes profils position"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "<i>New logo:</i>"
+msgstr "<i>Nouveau logo :</i>"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profiles
-msgid "<br/>\n"
-"                My profiles"
-msgstr "<br/>\n"
-"                Mes profils"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "<small>- Modification causes log out. Sign in just after!</small>"
+msgstr "<small>- La modification entraîne une déconnexion. Reconnectez-vous ensuite !</small>"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profiles
-msgid "<span class=\"d-none d-md-inline\">Profile name</span>"
-msgstr "<span class=\"d-none d-md-inline\">Nom du Profile</span>"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_structures
+msgid "<span class=\"d-none d-md-inline\">Structure name</span>"
+msgstr "<span class=\"d-none d-md-inline\">Nom de la structure</span>"
 
 #. module: partner_profiles_portal
-#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_partner__can_edit_main_profile_ids
-#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_users__can_edit_main_profile_ids
-msgid "Can edit main profile"
-msgstr "Peut éditer le profil principal"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "<span class=\"fa fa-arrow-left\"/> Back to my structures list"
+msgstr "<span class=\"fa fa-arrow-left\"/> Retour à la liste de mes structures"
 
 #. module: partner_profiles_portal
-#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_partner__can_edit_public_profile_ids
-#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_users__can_edit_public_profile_ids
-msgid "Can edit public profile"
-msgstr "Peux éditer le profil public"
+#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_partner__odoo_user_id
+#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_users__odoo_user_id
+msgid "Associated Odoo user"
+msgstr "Utilisateur Odoo associé"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.partner_profiles_form_view
+msgid "Associated User"
+msgstr "Utilisateur associé"
+
+#. module: partner_profiles_portal
+#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_partner__can_edit_structure_profiles_ids
+#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_users__can_edit_structure_profiles_ids
+msgid "Can edit struture profiles"
+msgstr "Peut éditer les profils de la structure"
+
+#. module: partner_profiles_portal
+#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_partner__child_main_contact_ids
+#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_users__child_main_contact_ids
+msgid "Can read structure profiles"
+msgstr "Peut lire les profiles de la structure"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
 msgid "City"
 msgstr "Ville"
 
 #. module: partner_profiles_portal
-#: code:addons/partner_profiles_portal/controllers/portal_my_profiles.py:51
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profiles
-#, python-format
-msgid "Company"
-msgstr "Société"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "City:"
+msgstr "Ville :"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
-msgid "Consult my profiles"
-msgstr "Consulter mes profils"
+#: code:addons/partner_profiles_portal/controllers/portal_my_profiles.py:51
+#: code:addons/partner_profiles_portal/controllers/portal_my_structures.py:40
+#, python-format
+msgid "Company"
+msgstr "Compagnie"
 
 #. module: partner_profiles_portal
 #: model:ir.model,name:partner_profiles_portal.model_res_partner
@@ -109,73 +102,143 @@ msgid "Contact"
 msgstr "Contact"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Contact information"
+msgstr "Information de contact"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
 msgid "Country"
 msgstr "Pays"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "Country..."
 msgstr "Pays..."
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Country:"
+msgstr "Pays :"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
 msgid "Email"
 msgstr "Courriel"
 
 #. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Email Pro:"
+msgstr "Courriel pro :"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Email:"
+msgstr "Courriel :"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Function:"
+msgstr "Poste occupé :"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "Image"
+msgstr "Image"
+
+#. module: partner_profiles_portal
+#: code:addons/partner_profiles_portal/controllers/portal_my_account.py:119
 #: code:addons/partner_profiles_portal/controllers/portal_partner_profile.py:40
-#: code:addons/partner_profiles_portal/controllers/portal_partner_profile.py:46
+#: code:addons/partner_profiles_portal/controllers/portal_structure_profile.py:41
 #, python-format
 msgid "Invalid Email! Please enter a valid email address."
 msgstr "L'email n'est pas valide, merci de renseigner un email valide !"
 
 #. module: partner_profiles_portal
+#: code:addons/partner_profiles_portal/controllers/portal_my_account.py:122
+#, python-format
+msgid "Invalid Public Email! Please enter a valid public email address."
+msgstr "L'email public n'est pas valide, merci de renseigner un email valide !"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Logo:"
+msgstr "Logo :"
+
+#. module: partner_profiles_portal
 #: code:addons/partner_profiles_portal/models/res_partner.py:14
-#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_partner__edit_structure_main_profile
-#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_users__edit_structure_main_profile
+#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_partner__edit_structure_profiles
+#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_users__edit_structure_profiles
 #, python-format
-msgid "Manage structure's main profile"
-msgstr "Gère le profil principal de la structure"
+msgid "Manage structure's profiles"
+msgstr "Gère les profiles de la structure"
 
 #. module: partner_profiles_portal
-#: code:addons/partner_profiles_portal/models/res_partner.py:17
-#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_partner__edit_structure_public_profile
-#: model:ir.model.fields,field_description:partner_profiles_portal.field_res_users__edit_structure_public_profile
-#, python-format
-msgid "Manage structure's public profile"
-msgstr "Gère le profil public de la structure"
-
-#. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
 msgid "Mobile"
-msgstr "Portable"
+msgstr "Mobile"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Mobile:"
+msgstr "Mobile :"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "My Structure Details"
+msgstr "Informations de ma structure"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_structures
+msgid "My Structures"
+msgstr "Mes Structures"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
-msgid "Modify my account"
-msgstr "Modifier mon compte"
+msgid "My information"
+msgstr "Mes informations"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_structures
+msgid "My structures"
+msgstr "Mes structures"
 
 #. module: partner_profiles_portal
 #: code:addons/partner_profiles_portal/controllers/portal_my_profiles.py:49
+#: code:addons/partner_profiles_portal/controllers/portal_my_structures.py:39
 #, python-format
 msgid "Name"
-msgstr "Name"
+msgstr "Nom"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
-msgid "Name / Nickname"
-msgstr "Nom / Pseudo"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "Name /\n"
+"                                            Nickname"
+msgstr "Nom /\n"
+"                                            Surnom"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Name:"
+msgstr "Nom :"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
 msgid "Phone"
 msgstr "Téléphone"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profiles
-msgid "Position"
-msgstr "Position"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Phone Pro:"
+msgstr "Téléphone pro :"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Phone:"
+msgstr "Téléphone :"
 
 #. module: partner_profiles_portal
 #: code:addons/partner_profiles_portal/controllers/portal_my_profiles.py:50
@@ -184,48 +247,82 @@ msgid "Profile Type"
 msgstr "Type de profil"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profiles
-msgid "Profile type"
-msgstr "Type de profil"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Public contact information"
+msgstr "Information publiques de contact"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profiles
-msgid "Profiles"
-msgstr "Profils"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "Public information"
+msgstr "Informations publiques"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
-msgid "Save\n"
-"                                            <span class=\"fa fa-long-arrow-right\"/>"
-msgstr "Enregistrer\n"
-"                                            <span class=\"fa fa-long-arrow-right\"/>"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Public name:"
+msgstr "Nom public :"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Save"
+msgstr "Sauvegarder"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "State /\n"
+"                                        Province"
+msgstr "État /\n"
+"                                        Province"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "Street"
 msgstr "Rue"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "Street 2"
-msgstr "Rue 2"
+msgstr "Rue (complément)"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profiles
-msgid "There are no profiles."
-msgstr "Il n'y a pas de profils"
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Street:"
+msgstr "Rue :"
 
 #. module: partner_profiles_portal
-#: code:addons/partner_profiles_portal/controllers/portal_partner_profile.py:33
-#: code:addons/partner_profiles_portal/controllers/portal_partner_profile.py:39
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "The following information are public information that might be\n"
+"                                    used in tierce applications (annuary for instance).<br/> You\n"
+"                                    can customize them (and be anonymous for instance) to publicly\n"
+"                                    show whatever you need or want."
+msgstr "Les informations suivantes sont des informations publiques qui peuvent être\n"
+"                                    visibles dans des applications tierces (annuaires par exemple).<br/> Vous\n"
+"                                    pouvez les personnaliser (et vous rendre anonyme par exemple) pour montrer\n"
+"                                    publiquement ce que vous souhaitez ou avez besoin."
+
+#. module: partner_profiles_portal
+#: code:addons/partner_profiles_portal/controllers/portal_my_account.py:134
+#: code:addons/partner_profiles_portal/controllers/portal_structure_profile.py:34
 #, python-format
-msgid "This nickname is already used, please find an other idea."
-msgstr "The Pseudo est déjà utilisé, merci d'en trouver un autre."
+msgid "This public name is already used, please find an other idea."
+msgstr "The nom public est déjà utilisé, merci d'en trouver un autre."
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
 msgid "Website"
 msgstr "Site Web"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Website:"
+msgstr "Site Web :"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_structures
+msgid "You are not linked with any structure."
+msgstr "Vous n'êtes lié à aucune structure."
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
@@ -233,7 +330,53 @@ msgid "Your Details"
 msgstr "Vos détails"
 
 #. module: partner_profiles_portal
-#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_profile
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "Your Name"
+msgstr "Votre Nom"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Your position in the structure"
+msgstr "Votre poste dans la structure"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Zip /\n"
+"                                        Postal Code:"
+msgstr "ZIP /\n"
+"                                        Code postal :"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "ZIP / Postal\n"
+"                                            Code"
+msgstr "ZIP / Code\n"
+"                                            Postal"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "Zip / Postal\n"
+"                                            Code:"
+msgstr "Zip / Code\n"
+"                                            Postal :"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
 msgid "Zip / Postal Code"
-msgstr "Code postal"
+msgstr "Zip / Code postal"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "details"
+msgstr "détails"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
+msgid "e.g. https://odoo.com"
+msgstr "e.g. https://odoo.com"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "select..."
+msgstr "sélectionner..."
 
