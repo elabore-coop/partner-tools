@@ -3,6 +3,7 @@
 
 import logging
 from odoo import _, api, fields, models
+from odoo.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 
@@ -79,6 +80,19 @@ class res_partner(models.Model):
             position_profile = self.env.ref("partner_profiles.partner_profile_position")
             self.contact_type = "attached"
             self.partner_profile = position_profile.id
+
+    @api.onchange("is_company")
+    def _onchange_is_company(self):
+        for partner in self:
+            if partner.is_main_profile:
+                if partner.has_position or partner.child_ids.filtered(lambda c: c.is_position_profile):
+                    raise UserError("You can not modify the partner company type when the parner has postion profiles associated. Please remove the position profiles before retrying.")
+                if partner.public_profile_id:
+                    # public_partner = self.env["res.partner"].browse(partner.public_profile_id)[0]
+                    values = {
+                        "is_company": partner.is_company,
+                    }
+                    partner.public_profile_id.sudo().write(values)
 
     @api.model
     def create(self, vals):
