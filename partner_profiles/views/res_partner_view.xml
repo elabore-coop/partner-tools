@@ -95,6 +95,10 @@
                     <attribute name="attrs">{'invisible': ['|', ('is_public_profile','=', True),
                         ('is_position_profile','=', True)]}</attribute>
                 </xpath>
+                <xpath expr="//field[@name='company_type']" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|', ('is_public_profile','=', True),
+                        ('is_position_profile','=', True)]}</attribute>
+                </xpath>
                 <xpath expr="//field[@name='image']" position="attributes">
                     <attribute name="attrs">{'invisible': ['|', ('is_public_profile','=', True),
                         ('is_position_profile','=', True)]}</attribute>
