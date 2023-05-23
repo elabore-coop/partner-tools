@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-16 12:33+0000\n"
-"PO-Revision-Date: 2023-05-16 12:33+0000\n"
+"POT-Creation-Date: 2023-05-23 15:14+0000\n"
+"PO-Revision-Date: 2023-05-23 15:14+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgstr "Ville :"
 #: code:addons/partner_profiles_portal/controllers/portal_my_structures.py:40
 #, python-format
 msgid "Company"
-msgstr "Compagnie"
+msgstr "Entreprise"
 
 #. module: partner_profiles_portal
 #: model:ir.model,name:partner_profiles_portal.model_res_partner
@@ -149,7 +149,7 @@ msgid "Image"
 msgstr "Image"
 
 #. module: partner_profiles_portal
-#: code:addons/partner_profiles_portal/controllers/portal_my_account.py:119
+#: code:addons/partner_profiles_portal/controllers/portal_my_account.py:115
 #: code:addons/partner_profiles_portal/controllers/portal_partner_profile.py:40
 #: code:addons/partner_profiles_portal/controllers/portal_structure_profile.py:41
 #, python-format
@@ -157,7 +157,7 @@ msgid "Invalid Email! Please enter a valid email address."
 msgstr "L'email n'est pas valide, merci de renseigner un email valide !"
 
 #. module: partner_profiles_portal
-#: code:addons/partner_profiles_portal/controllers/portal_my_account.py:122
+#: code:addons/partner_profiles_portal/controllers/portal_my_account.py:118
 #, python-format
 msgid "Invalid Public Email! Please enter a valid public email address."
 msgstr "L'email public n'est pas valide, merci de renseigner un email valide !"
@@ -168,10 +168,9 @@ msgid "Logo:"
 msgstr "Logo :"
 
 #. module: partner_profiles_portal
-#: code:addons/partner_profiles_portal/models/res_partner.py:14
+#: model:ir.model.fields,field_description:partner_profiles_portal.field_create_position_profile__edit_structure_profiles
 #: model:ir.model.fields,field_description:partner_profiles_portal.field_res_partner__edit_structure_profiles
 #: model:ir.model.fields,field_description:partner_profiles_portal.field_res_users__edit_structure_profiles
-#, python-format
 msgid "Manage structure's profiles"
 msgstr "Gère les profiles de la structure"
 
@@ -303,7 +302,7 @@ msgstr "Les informations suivantes sont des informations publiques qui peuvent �
 "                                    publiquement ce que vous souhaitez ou avez besoin."
 
 #. module: partner_profiles_portal
-#: code:addons/partner_profiles_portal/controllers/portal_my_account.py:134
+#: code:addons/partner_profiles_portal/controllers/portal_my_account.py:130
 #: code:addons/partner_profiles_portal/controllers/portal_structure_profile.py:34
 #, python-format
 msgid "This public name is already used, please find an other idea."
@@ -348,7 +347,7 @@ msgstr "ZIP /\n"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
-msgid "ZIP / Postal\n"
+msgid "Zip / Postal\n"
 "                                            Code"
 msgstr "ZIP / Code\n"
 "                                            Postal"
@@ -364,6 +363,11 @@ msgstr "Zip / Code\n"
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
 msgid "Zip / Postal Code"
 msgstr "Zip / Code postal"
+
+#. module: partner_profiles_portal
+#: model:ir.model,name:partner_profiles_portal.model_create_position_profile
+msgid "create Position Profile"
+msgstr "créer un profil Position"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
