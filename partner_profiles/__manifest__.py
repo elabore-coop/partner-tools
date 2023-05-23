@@ -3,7 +3,7 @@
 
 {
     "name": "partner_profiles",
-    "version": "12.0.2.1.1",
+    "version": "12.0.2.2.0",
     "author": "Elabore",
     "website": "https://elabore.coop",
     "maintainer": "Stéphan Sainléger",
@@ -26,6 +26,7 @@
     # always loaded
     "data": [
         "security/ir.model.access.csv",
+        "wizard/create_position_profile.xml",
         "views/res_partner_view.xml",
         "views/partner_profile_view.xml",
         "data/partner_profile_data.xml",
