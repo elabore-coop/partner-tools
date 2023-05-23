@@ -3,7 +3,7 @@
 
 {
     "name": "partner_profiles_portal",
-    "version": "12.0.2.2.2",
+    "version": "12.0.2.3.0",
     "author": "Elabore",
     "website": "https://elabore.coop",
     "maintainer": "Stéphan Sainléger",
@@ -30,6 +30,7 @@
         "views/portal_partner_structure_template.xml",
         "views/portal_my_account.xml",
         "views/res_partner_view.xml",
+        "wizard/create_position_profile.xml",
     ],
     # only loaded in demonstration mode
     "demo": [],

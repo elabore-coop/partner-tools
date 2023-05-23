@@ -19,22 +19,6 @@
                         <field name="edit_structure_profiles" />
                     </group>
                 </xpath>
-
-                <!-- page Contacts & Adresses -->
-                <xpath
-                    expr="//field[@name='child_ids']/form/sheet/group/group/field[@name='comment']"
-                    position="before">
-                    <field name="edit_structure_profiles"
-                        attrs="{'invisible': [('is_position_profile','=',False)]}" />
-                </xpath>
-
-                <!-- page Other Positions -->
-                <xpath
-                    expr="//field[@name='other_contact_ids']/form/sheet/group/group/field[@name='parent_id']"
-                    position="after">
-                    <field name="edit_structure_profiles"
-                        attrs="{'invisible': [('is_position_profile','=',False)]}" />
-                </xpath>
             </field>
         </record>
     </data>
