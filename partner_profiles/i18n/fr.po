@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-16 10:28+0000\n"
-"PO-Revision-Date: 2023-05-16 10:28+0000\n"
+"POT-Creation-Date: 2023-05-23 15:09+0000\n"
+"PO-Revision-Date: 2023-05-23 15:09+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,9 +16,21 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: partner_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles.create_position_wizard_view_form
+msgid "<span>You are about to create a <strong>Position Profile</strong> which\n"
+"                            represents the role or the job of a person in a structure.</span>"
+msgstr "<span>Vous allez créer un <strong>profil Position</strong> qui\n"
+"                            représente le rôle que tient une personne au sein d'une structure.</span>""
+
+#. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "Address"
 msgstr "Adresse"
+
+#. module: partner_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles.create_position_wizard_view_form
+msgid "Cancel"
+msgstr "Annuler"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
@@ -33,7 +45,7 @@ msgstr "Société"
 #. module: partner_profiles
 #: model:ir.model,name:partner_profiles.model_res_partner
 msgid "Contact"
-msgstr "Contact"
+msgstr ""
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
@@ -41,24 +53,57 @@ msgid "Country"
 msgstr "Pays"
 
 #. module: partner_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles.create_position_wizard_view_form
+msgid "Create"
+msgstr "Créer"
+
+#. module: partner_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
+msgid "Create New Position"
+msgstr "Créer une nouvelle position"
+
+#. module: partner_profiles
+#: model:ir.actions.act_window,name:partner_profiles.action_create_position_profile_wizard
+msgid "Create Position Profile"
+msgstr "Créer un profil Position"
+
+#. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "Create Public Profile"
 msgstr "Créer le profil public"
 
 #. module: partner_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles.create_position_wizard_view_form
+msgid "Create a position profile"
+msgstr "Créer un profil Position"
+
+#. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__create_uid
 #: model:ir.model.fields,field_description:partner_profiles.field_partner_profile__create_uid
 msgid "Created by"
 msgstr "Créé par"
 
 #. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__create_date
 #: model:ir.model.fields,field_description:partner_profiles.field_partner_profile__create_date
 msgid "Created on"
 msgstr "Créé le"
 
 #. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__display_name
 #: model:ir.model.fields,field_description:partner_profiles.field_partner_profile__display_name
 msgid "Display Name"
 msgstr "Nom affiché"
+
+#. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__email
+msgid "Email"
+msgstr "Courriel"
+
+#. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__function
+msgid "Function"
+msgstr "Fonction"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__has_position
@@ -67,9 +112,15 @@ msgid "Has Position"
 msgstr "A une position"
 
 #. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__id
 #: model:ir.model.fields,field_description:partner_profiles.field_partner_profile__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
+
+#. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__is_company
+msgid "Is Company"
+msgstr "Est une société"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__is_main_profile
@@ -90,16 +141,19 @@ msgid "Is Public Profile"
 msgstr "Est un profil Public"
 
 #. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile____last_update
 #: model:ir.model.fields,field_description:partner_profiles.field_partner_profile____last_update
 msgid "Last Modified on"
 msgstr "Dernière modification le"
 
 #. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__write_uid
 #: model:ir.model.fields,field_description:partner_profiles.field_partner_profile__write_uid
 msgid "Last Updated by"
 msgstr "Dernière mise à jour par"
 
 #. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__write_date
 #: model:ir.model.fields,field_description:partner_profiles.field_partner_profile__write_date
 msgid "Last Updated on"
 msgstr "Dernière mise à jour le"
@@ -122,6 +176,11 @@ msgid "Name"
 msgstr "Nom"
 
 #. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__comment
+msgid "Notes"
+msgstr "Commentaires"
+
+#. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__other_contact_ids
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__other_contact_ids
 msgid "Others Positions"
@@ -135,7 +194,6 @@ msgstr "Profiles de contact"
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__partner_profile
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__partner_profile
-#: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "Partner profile"
 msgstr "Profil de contact"
 
@@ -165,6 +223,16 @@ msgid "Partner: generate missing public profiles"
 msgstr "Contact : Générer les profil publics manquant"
 
 #. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__partner_id
+msgid "Person"
+msgstr "Personne"
+
+#. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__phone
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 #: model:partner.profile,name:partner_profiles.partner_profile_position
 msgid "Position Profile"
@@ -185,7 +253,7 @@ msgstr "Profil public"
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_partner_profile__ref
 msgid "Ref"
-msgstr "Ref"
+msgstr ""
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
@@ -203,6 +271,11 @@ msgid "Street..."
 msgstr "Rue.."
 
 #. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__structure_id
+msgid "Structure"
+msgstr "Structure"
+
+#. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__to_migrate
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__to_migrate
 msgid "To Migrate"
@@ -211,7 +284,12 @@ msgstr "A migrer"
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "ZIP"
-msgstr "ZIP"
+msgstr ""
+
+#. module: partner_profiles
+#: model:ir.model,name:partner_profiles.model_create_position_profile
+msgid "create Position Profile"
+msgstr "créer un profil Position"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view

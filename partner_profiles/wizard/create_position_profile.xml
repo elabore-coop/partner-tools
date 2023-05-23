@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="create_position_wizard_view_form" model="ir.ui.view">
+        <field name="name">create.position.wizard.view.form</field>
+        <field name="model">create.position.profile</field>
+        <field name="arch" type="xml">
+            <form string="Create a position profile">
+                <sheet>
+                    <div class="alert alert-info" role="alert" style="margin-bottom:0px;">
+                        <span>You are about to create a <strong>Position Profile</strong> which
+                            represents the role or the job of a person in a structure.</span>
+                    </div>
+                    <group>
+                        <field name="is_company" invisible="1" />
+                        <field name="structure_id"
+                            attrs="{'readonly': [('is_company','=',True)], 'required': [('is_company','=',False)]}" />
+                        <field name="partner_id"
+                            attrs="{'readonly': [('is_company','=',False)], 'required': [('is_company','=',True)]}" />
+                        <field name="function" />
+                        <field name="email" />
+                        <field name="phone" />
+                        <field name="comment" />
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Create" name="create_position_profile" type="object"
+                        class="btn-primary" />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_create_position_profile_wizard" model="ir.actions.act_window">
+        <field name="name">Create Position Profile</field>
+        <field name="res_model">create.position.profile</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="create_position_wizard_view_form" />
+        <field name="target">new</field>
+    </record>
+
+    <act_window name="Create Position Profile"
+        res_model="create.position.profile"
+        src_model="res.partner"
+        multi="True"
+        key2="client_action_multi"
+        view_mode="form"
+        id="action_create_position_profile_wizard" />
+
+</odoo>
