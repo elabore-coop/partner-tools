@@ -40,6 +40,8 @@ class res_partner(models.Model):
         domain=[("is_position_profile", "=", True)]
     )
 
+    structure_position_ids = fields.One2many('res.partner', 'parent_id', string="Structure's positions", domain=[('active', '=', True), ('is_position_profile', '=', True)])
+
     @api.depends("partner_profile", "other_contact_ids")
     def _compute_profile_booleans(self):
         for partner in self:
