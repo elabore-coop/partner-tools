@@ -16,6 +16,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: partner_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_kanban_view
+msgid "<span attrs=\"{'invisible': [('is_main_profile','=',False)]}\" style=\"color:#7c7bad;\">\n"
+"                            <b>Main profile</b>\n"
+"                        </span>\n"
+"                        <span attrs=\"{'invisible': [('is_public_profile','=',False)]}\" style=\"color:#7c7bad;\">\n"
+"                            <b>Public profile</b>\n"
+"                        </span>\n"
+"                        <span attrs=\"{'invisible': [('is_position_profile','=',False)]}\" style=\"color:#7c7bad;\">\n"
+"                            <b>Position profile</b>\n"
+"                        </span>"
+msgstr ""
+
+#. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "<span>Please find here <strong>all the position profiles</strong> linked\n"
 "                                to this main profile.</span>"

@@ -225,5 +225,37 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="partner_profiles_kanban_view" model="ir.ui.view">
+            <field name="name">Partner Profiles Kanban View</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_kanban_view" />
+            <field name="sequence">99</field>
+            <field name="arch" type="xml">
+                <xpath expr="//kanban" position="inside">
+                    <field name="is_main_profile" />
+                    <field name="is_public_profile" />
+                    <field name="is_position_profile" />
+                </xpath>
+                <xpath
+                    expr="//div[@class='oe_kanban_details']/div[hasclass('o_kanban_tags_section')]"
+                    position="before">
+                    <div>
+                        <span attrs="{'invisible': [('is_main_profile','=',False)]}"
+                            style="color:#7c7bad;">
+                            <b>Main profile</b>
+                        </span>
+                        <span attrs="{'invisible': [('is_public_profile','=',False)]}"
+                            style="color:#7c7bad;">
+                            <b>Public profile</b>
+                        </span>
+                        <span attrs="{'invisible': [('is_position_profile','=',False)]}"
+                            style="color:#7c7bad;">
+                            <b>Position profile</b>
+                        </span>
+                    </div>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>
