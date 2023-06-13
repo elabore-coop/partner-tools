@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_my_positions" name="My Positions">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True" />
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">My Positions</t>
+            </t>
+            <h3>
+                My positions
+            </h3>
+            <div class="oe_position" id="oe_position_portal_my_positions_1" />
+            <t t-if="not positions">
+                <div class="alert alert-warning mt8" role="alert">
+                    You do not have any positions in your structure.
+                </div>
+            </t>
+            <t t-if="positions" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>
+                            <span class='d-none d-md-inline'>Person name</span>
+                        </th>
+                        <th>
+                            <span class='d-none d-md-inline'>Function</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="positions" t-as="position">
+                        <td>
+                            <a t-attf-href="/my/position/#{position.id}?{{ keep_query() }}">
+                                <span t-field="position.name" />
+                            </a>
+                        </td>
+                        <td>
+                            <span t-field="position.function" />
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+        </t>
+    </template>
+</odoo>
