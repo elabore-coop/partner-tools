@@ -3,6 +3,7 @@
     <template id="portal_my_details_profiles" inherit_id="portal.portal_my_details"
         name="User profiles details">
         <xpath expr="//form" position="replace">
+            <div class="oe_structure" id="oe_structure_portal_my_details_1" />
             <form action="/my/account" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
                 <div class="row o_portal_details">
@@ -229,6 +230,7 @@
                     </div>
                 </div>
             </form>
+            <div class="oe_structure" id="oe_structure_portal_my_details_2" />
         </xpath>
     </template>
 </odoo>
