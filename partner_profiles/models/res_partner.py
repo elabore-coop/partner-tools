@@ -143,6 +143,38 @@ class res_partner(models.Model):
                         child.unlink()
         return super(res_partner, self).unlink()
 
+    @api.multi
+    def write(self, vals):
+        super(res_partner, self).write(vals)
+        if "active" in vals and not "sync_active" in vals:
+            self._sync_active_profiles()
+
+    def _sync_active_profiles(self):
+        """Synchronize the active fields values between all the profiles of a partner.
+        Change in main profile is synchronized in public and position profiles.
+        Change in public profile is NOT synchronized in main and public profiles.
+        Change in position profile is NOT synchronized in main and public profiles."""
+        for partner in self:
+            if partner.is_main_profile:
+                # Sync public profile active value with main one
+                public_profile = partner.public_profile_id
+                if public_profile and (public_profile.active != partner.active):
+                   public_profile.write({"active": partner.active, "sync_active": True})
+
+                # Sync position profiles active value with main one
+                positions = self.env["res.partner"].search(
+                    [
+                        ("is_position_profile", "=", True),
+                        ("active", "!=", partner.active),
+                        '|',
+                        ("contact_id", "=", partner.id),
+                        ("parent_id", "=", partner.id)
+                    ]
+                )
+                if len(positions) > 0:
+                    for position in positions:
+                        position.write({"active": partner.active, "sync_active": True})
+
     @api.model
     def search_position_partners(self, profile):
         if profile:
