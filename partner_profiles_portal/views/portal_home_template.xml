@@ -24,6 +24,14 @@
                             </button>
                         </a>
                     </div>
+                    <div
+                        id="positions" t-if="user_id.partner_id.is_company">
+                        <a t-attf-href="/my/positions">
+                            <button class="btn btn-primary mb8">
+                                My positions
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </xpath>

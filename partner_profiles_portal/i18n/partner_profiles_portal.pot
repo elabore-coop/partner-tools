@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-23 15:12+0000\n"
-"PO-Revision-Date: 2023-05-23 15:12+0000\n"
+"POT-Creation-Date: 2023-06-13 13:59+0000\n"
+"PO-Revision-Date: 2023-06-13 13:59+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,13 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
+msgid "'s position in the structure"
+msgstr ""
+
+#. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "<i class=\"fa fa-fw fa-check-circle\"/> Data saved!"
 msgstr ""
@@ -47,13 +53,33 @@ msgid "<small>- Modification causes log out. Sign in just after!</small>"
 msgstr ""
 
 #. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
+msgid "<span class=\"d-none d-md-inline\">Function</span>"
+msgstr ""
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
+msgid "<span class=\"d-none d-md-inline\">Person name</span>"
+msgstr ""
+
+#. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_structures
 msgid "<span class=\"d-none d-md-inline\">Structure name</span>"
 msgstr ""
 
 #. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
+msgid "<span class=\"fa fa-arrow-left\"/> Back to my positions list"
+msgstr ""
+
+#. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "<span class=\"fa fa-arrow-left\"/> Back to my structures list"
+msgstr ""
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
+msgid "Access rights"
 msgstr ""
 
 #. module: partner_profiles_portal
@@ -90,6 +116,7 @@ msgid "City:"
 msgstr ""
 
 #. module: partner_profiles_portal
+#: code:addons/partner_profiles_portal/controllers/portal_my_positions.py:40
 #: code:addons/partner_profiles_portal/controllers/portal_my_profiles.py:51
 #: code:addons/partner_profiles_portal/controllers/portal_my_structures.py:40
 #, python-format
@@ -129,6 +156,7 @@ msgid "Email"
 msgstr ""
 
 #. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "Email Pro:"
 msgstr ""
@@ -139,6 +167,7 @@ msgid "Email:"
 msgstr ""
 
 #. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "Function:"
 msgstr ""
@@ -151,6 +180,7 @@ msgstr ""
 #. module: partner_profiles_portal
 #: code:addons/partner_profiles_portal/controllers/portal_my_account.py:115
 #: code:addons/partner_profiles_portal/controllers/portal_partner_profile.py:40
+#: code:addons/partner_profiles_portal/controllers/portal_position_profile.py:28
 #: code:addons/partner_profiles_portal/controllers/portal_structure_profile.py:41
 #, python-format
 msgid "Invalid Email! Please enter a valid email address."
@@ -168,10 +198,28 @@ msgid "Logo:"
 msgstr ""
 
 #. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
+msgid "Manage\n"
+"                                    the structure's profiles"
+msgstr ""
+
+#. module: partner_profiles_portal
+#: code:addons/partner_profiles_portal/models/res_partner.py:14
+#, python-format
+msgid "Manage structure's main profile"
+msgstr ""
+
+#. module: partner_profiles_portal
 #: model:ir.model.fields,field_description:partner_profiles_portal.field_create_position_profile__edit_structure_profiles
 #: model:ir.model.fields,field_description:partner_profiles_portal.field_res_partner__edit_structure_profiles
 #: model:ir.model.fields,field_description:partner_profiles_portal.field_res_users__edit_structure_profiles
 msgid "Manage structure's profiles"
+msgstr ""
+
+#. module: partner_profiles_portal
+#: code:addons/partner_profiles_portal/models/res_partner.py:17
+#, python-format
+msgid "Manage structure's public profile"
 msgstr ""
 
 #. module: partner_profiles_portal
@@ -182,6 +230,16 @@ msgstr ""
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "Mobile:"
+msgstr ""
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
+msgid "My Position Details"
+msgstr ""
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
+msgid "My Positions"
 msgstr ""
 
 #. module: partner_profiles_portal
@@ -201,11 +259,18 @@ msgstr ""
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
+msgid "My positions"
+msgstr ""
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_structures
 msgid "My structures"
 msgstr ""
 
 #. module: partner_profiles_portal
+#: code:addons/partner_profiles_portal/controllers/portal_my_positions.py:39
 #: code:addons/partner_profiles_portal/controllers/portal_my_profiles.py:49
 #: code:addons/partner_profiles_portal/controllers/portal_my_structures.py:39
 #, python-format
@@ -229,6 +294,7 @@ msgid "Phone"
 msgstr ""
 
 #. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "Phone Pro:"
 msgstr ""
@@ -261,6 +327,7 @@ msgstr ""
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "Save"
 msgstr ""
@@ -325,6 +392,11 @@ msgid "You are not linked with any structure."
 msgstr ""
 
 #. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
+msgid "You do not have any positions in your structure."
+msgstr ""
+
+#. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
 msgid "Your Details"
 msgstr ""
@@ -368,6 +440,7 @@ msgid "create Position Profile"
 msgstr ""
 
 #. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "details"
 msgstr ""
