@@ -59,6 +59,13 @@ class CustomerPortalStructureProfile(CustomerPortal):
         ]
         return fields
 
+    def _get_main_boolean_structure_fields(self):
+        '''Provides the fields for which we must check the presence
+        in form's kw to know the value to save in the partner field.
+        All of them MUST start with "main_".'''
+        fields = []
+        return fields
+
     def _get_public_profile_fields(self):
         '''Provides all the fields that must fill the structure's public profile.
         All of them MUST start with "public_".'''
@@ -75,6 +82,13 @@ class CustomerPortalStructureProfile(CustomerPortal):
         ]
         return fields
 
+    def _get_public_boolean_structure_fields(self):
+        '''Provides the fields for which we must check the presence
+        in form's kw to know the value to save in the partner field.
+        All of them MUST start with "public_".'''
+        fields = []
+        return fields
+
     def _get_position_profile_fields(self):
         '''Provides all the fields that must fill the structure's position profile of the user.
         All of them MUST start with "position_".'''
@@ -85,13 +99,31 @@ class CustomerPortalStructureProfile(CustomerPortal):
         ]
         return fields
 
+    def _get_position_boolean_structure_fields(self):
+        '''Provides the fields for which we must check the presence
+        in form's kw to know the value to save in the partner field.
+        All of them MUST start with "position_".'''
+        fields = []
+        return fields
+
     def _transform_in_res_partner_fields(self, kw, profile_fields, prefix=""):
         '''Transforms kw's values in res_partner fields and values'''
         return {key[len(prefix):]: kw[key] for key in profile_fields if key in kw}
 
-    def _get_page_saving_main_values(self, kw):
+    def _add_boolean_values(self, values, kw, boolean_fields, prefix=""):
+        for key in boolean_fields:
+            values.update(
+                {
+                    key[len(prefix):]: kw.get(key, "off") == "on",
+                }
+            )
+        return values
+
+    def _get_page_saving_main_structure_values(self, kw):
         profile_fields = self._get_main_profile_fields()
         values = self._transform_in_res_partner_fields(kw, profile_fields, "main_")
+        boolean_fields = self._get_main_boolean_structure_fields()
+        values = self._add_boolean_values(values, kw, boolean_fields, "main_")
         if 'logo' in kw:
             image = kw.get('logo')
             if image:
@@ -102,14 +134,18 @@ class CustomerPortalStructureProfile(CustomerPortal):
                 })
         return values
 
-    def _get_page_saving_public_values(self, kw):
+    def _get_page_saving_public_structure_values(self, kw):
         profile_fields = self._get_public_profile_fields()
         values = self._transform_in_res_partner_fields(kw, profile_fields, "public_")
+        boolean_fields = self._get_public_boolean_structure_fields()
+        values = self._add_boolean_values(values, kw, boolean_fields, "public_")
         return values
 
-    def _get_page_saving_position_values(self, kw):
+    def _get_page_saving_position_structure_values(self, kw):
         profile_fields = self._get_position_profile_fields()
         values = self._transform_in_res_partner_fields(kw, profile_fields, "position_")
+        boolean_fields = self._get_position_boolean_structure_fields()
+        values = self._add_boolean_values(values, kw, boolean_fields, "position_")
         return values
 
     def _get_page_opening_values(self):
@@ -170,13 +206,13 @@ class CustomerPortalStructureProfile(CustomerPortal):
             values.update(kw)
             if not error:
                 # Update main profile
-                new_values = self._get_page_saving_main_values(kw)
+                new_values = self._get_page_saving_main_structure_values(kw)
                 main_profile.sudo().write(new_values)
                 # Update public profile
-                new_values = self._get_page_saving_public_values(kw)
+                new_values = self._get_page_saving_public_structure_values(kw)
                 public_profile.sudo().write(new_values)
                 # Update position profile
-                new_values = self._get_page_saving_position_values(kw)
+                new_values = self._get_page_saving_position_structure_values(kw)
                 position_profile.sudo().write(new_values)
                 # End of updates
                 if redirect:

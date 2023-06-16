@@ -21,13 +21,38 @@ class CustomerPortalMyProfile(CustomerPortal):
     def _get_special_fields(self):
         return ["main_logo"]
 
+    def _get_main_boolean_account_fields(self):
+        '''Provides the fields for which we must check the presence
+        in form's kw to know the value to save in the partner field.
+        All of them MUST start with "main_".'''
+        fields = []
+        return fields
+
+    def _get_public_boolean_account_fields(self):
+        '''Provides the fields for which we must check the presence
+        in form's kw to know the value to save in the partner field.
+        All of them MUST start with "public_".'''
+        fields = []
+        return fields
+
     def _transform_in_partner_fields(self, kw, profile_fields, prefix=""):
         '''Transforms kw's values in res_partner fields and values'''
         return {key[len(prefix):]: kw[key] for key in profile_fields if key in kw}
 
+    def _add_boolean_values(self, values, kw, boolean_fields, prefix=""):
+        for key in boolean_fields:
+            values.update(
+                {
+                    key[len(prefix):]: kw.get(key, "off") == "on",
+                }
+            )
+        return values
+
     def _retrieve_main_values(self, data):
         main_fields = self._get_mandatory_main_fields() + self._get_optional_main_fields()
         values = self._transform_in_partner_fields(data, main_fields, "main_")
+        boolean_fields = self._get_main_boolean_account_fields()
+        values = self._add_boolean_values(values, data, boolean_fields, "main_")
         if 'main_logo' in data:
             image = data.get('main_logo')
             if image:
@@ -41,6 +66,8 @@ class CustomerPortalMyProfile(CustomerPortal):
     def _retrieve_public_values(self, data):
         public_fields = self._get_mandatory_public_fields() + self._get_optional_public_fields()
         values = self._transform_in_partner_fields(data, public_fields, "public_")
+        boolean_fields = self._get_public_boolean_account_fields()
+        values = self._add_boolean_values(values, data, boolean_fields, "public_")
         return values
 
     def _get_page_opening_values(self):
