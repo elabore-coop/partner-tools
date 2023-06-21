@@ -57,9 +57,9 @@
                     expr="//field[@name='child_ids']" position="before">
                     <div class="alert alert-info" role="alert" style="margin-bottom:0px;"
                         attrs="{'invisible': [('is_company','=', False)]}">
-                        <span>Please find here <strong>all</strong> the profiles/addresses/contacts
-                            linked to this main profile. Contact creation from this tab <strong>only
-                            generates new main profiles</strong>.</span>
+                        <span>Please find here <strong>all</strong> the addresses/contacts linked to
+                            this main profile. Contact creation from this tab <strong>only
+                                generates new main profiles</strong>.</span>
                     </div>
                     <div class="alert alert-info" role="alert" style="margin-bottom:0px;"
                         attrs="{'invisible': [('is_company','=', True)]}">
