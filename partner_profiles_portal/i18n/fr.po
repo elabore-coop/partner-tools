@@ -396,8 +396,13 @@ msgstr "Vos détails"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
-msgid "Your Name"
-msgstr "Votre Nom"
+msgid "Structure's name"
+msgstr "Nom de la structure"
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "Firstname and Lastname"
+msgstr "Prénom et Nom"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
