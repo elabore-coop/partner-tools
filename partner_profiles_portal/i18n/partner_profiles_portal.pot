@@ -403,7 +403,12 @@ msgstr ""
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
-msgid "Your Name"
+msgid "Structure's name"
+msgstr ""
+
+#. module: partner_profiles_portal
+#: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
+msgid "Firstname and Lastname"
 msgstr ""
 
 #. module: partner_profiles_portal
