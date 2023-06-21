@@ -27,52 +27,52 @@ msgid "<span attrs=\"{'invisible': [('is_main_profile','=',False)]}\" style=\"co
 "                            <b>Position profile</b>\n"
 "                        </span>"
 msgstr "<span attrs=\"{'invisible': [('is_main_profile','=',False)]}\" style=\"color:#7c7bad;\">\n"
-"                            <b>Profil principal</b>\n"
+"                            <b>Fiche administrative</b>\n"
 "                        </span>\n"
 "                        <span attrs=\"{'invisible': [('is_public_profile','=',False)]}\" style=\"color:#7c7bad;\">\n"
-"                            <b>Profil public</b>\n"
+"                            <b>Coordonnées puvliques</b>\n"
 "                        </span>\n"
 "                        <span attrs=\"{'invisible': [('is_position_profile','=',False)]}\" style=\"color:#7c7bad;\">\n"
-"                            <b>Profile position</b>\n"
+"                            <b>Fiche fonction</b>\n"
 "                        </span>"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "<span>Please find here <strong>all the position profiles</strong> linked\n"
 "                                to this main profile.</span>"
-msgstr "<span>Vous trouverez ici <strong>tous les profils Position</strong> liés\n"
-"                                à ce profil principal</span>"
+msgstr "<span>Vous trouverez ici <strong>toutes les fiches Fonction</strong> liés\n"
+"                                à cette fiche administrative</span>"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "<span>Please find here <strong>all the position profiles</strong> linked to\n"
 "                            this main profile.</span>"
-msgstr "<span>Vous trouverez ici <strong>tous les profils Position</strong> liés à\n"
-"                                ce profil principal</span>"
+msgstr "<span>Vous trouverez ici <strong>toutes les fiches Fonction</strong> liés à\n"
+"                                cette fiche administrative</span>"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "<span>Please find here <strong>all</strong> the addresses linked with this\n"
 "                            main profile. Adress creation from this tab <strong>only\n"
 "                                generates new main profiles</strong>.</span>"
-msgstr "<span>Vous trouverez ici <strong>toutes</strong> les adresses liées avec ce\n"
-"                            profil principal. La création d'adresse depuis cet onglet <strong>génère\n"
+msgstr "<span>Vous trouverez ici <strong>toutes</strong> les adresses liées avec cette\n"
+"                            fiche administrative. La création d'adresse depuis cet onglet <strong>génère\n"
 "                                uniquement des profils principaux</strong>.</span>"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
-msgid "<span>Please find here <strong>all</strong> the profiles/addresses/contacts\n"
-"                            linked to this main profile. Contact creation from this tab <strong>only\n"
-"                            generates new main profiles</strong>.</span>"
-msgstr "<span>Vous trouverez ici <strong>tou(te)s</strong> les profils/adresses/contacts lié(e)s avec ce\n"
-"                            profil principal. La création de contact depuis cet onglet <strong>génère\n"
+msgid "<span>Please find here <strong>all</strong> the addresses/contacts linked to\n"
+"                            this main profile. Contact creation from this tab <strong>only\n"
+"                                generates new main profiles</strong>.</span>"
+msgstr "<span>Vous trouverez ici <strong>tou(te)s</strong> les adresses/contacts lié(e)s avec cette\n"
+"                            fiche administrative. La création de contact depuis cet onglet <strong>génère\n"
 "                                uniquement des profils principaux</strong>.</span>"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.create_position_wizard_view_form
 msgid "<span>You are about to create a <strong>Position Profile</strong> which\n"
 "                            represents the role or the job of a person in a structure.</span>"
-msgstr "<span>Vous allez créer un <strong>profil Position</strong> qui\n"
+msgstr "<span>Vous allez créer une <strong>fiche Fonction</strong> qui\n"
 "                            représente le rôle que tient une personne au sein d'une structure.</span>""
 
 #. module: partner_profiles
@@ -113,22 +113,22 @@ msgstr "Créer"
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "Create New Position"
-msgstr "Créer une nouvelle position"
+msgstr "Créer une nouvelle fonction"
 
 #. module: partner_profiles
 #: model:ir.actions.act_window,name:partner_profiles.action_create_position_profile_wizard
 msgid "Create Position Profile"
-msgstr "Créer un profil Position"
+msgstr "Créer une fiche Fonction"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "Create Public Profile"
-msgstr "Créer le profil public"
+msgstr "Ajouter des coordonnées publiques"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.create_position_wizard_view_form
 msgid "Create a position profile"
-msgstr "Créer un profil Position"
+msgstr "Créer une fiche Fonction"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__create_uid
@@ -162,7 +162,7 @@ msgstr "Fonction"
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__has_position
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__has_position
 msgid "Has Position"
-msgstr "A une position"
+msgstr "A une fonction"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__id
@@ -179,19 +179,19 @@ msgstr "Est une société"
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__is_main_profile
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__is_main_profile
 msgid "Is Main Profile"
-msgstr "Est un profil Principal"
+msgstr "Est une fiche administrative"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__is_position_profile
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__is_position_profile
 msgid "Is Position Profile"
-msgstr "Est un profil Position"
+msgstr "Est une fiche fontion"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__is_public_profile
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__is_public_profile
 msgid "Is Public Profile"
-msgstr "Est un profil Public"
+msgstr "Est un fiche de coordonnées publiques"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile____last_update
@@ -215,13 +215,13 @@ msgstr "Dernière mise à jour le"
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__contact_id
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__contact_id
 msgid "Main Contact"
-msgstr "Fiche principale"
+msgstr "Fiche administrative"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 #: model:partner.profile,name:partner_profiles.partner_profile_main
 msgid "Main Profile"
-msgstr "Profil principal"
+msgstr "Fiche administrative"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
@@ -278,7 +278,7 @@ msgstr "Contact : Migration des Contacts standards aux Conctacts à profile"
 #: model:ir.cron,cron_name:partner_profiles.ir_cron_generate_missing_public_profiles
 #: model:ir.cron,name:partner_profiles.ir_cron_generate_missing_public_profiles
 msgid "Partner: generate missing public profiles"
-msgstr "Contact : Générer les profil publics manquant"
+msgstr "Contact : Générer les fiches de coordonnées publiques manquantes"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__partner_id
@@ -299,24 +299,24 @@ msgstr "Téléphone :"
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 #: model:partner.profile,name:partner_profiles.partner_profile_position
 msgid "Position Profile"
-msgstr "Profil position"
+msgstr "Fiche fonction"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "Positions"
-msgstr ""
+msgstr "Fonctions"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 #: model:partner.profile,name:partner_profiles.partner_profile_public
 msgid "Public Profile"
-msgstr "Profil public"
+msgstr "Coordonnées publiques"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__public_profile_id
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__public_profile_id
 msgid "Public profile"
-msgstr "Profil public"
+msgstr "Coordonnées publiques"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_partner_profile__ref
@@ -347,7 +347,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__structure_position_ids
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__structure_position_ids
 msgid "Structure's positions"
-msgstr "Position occupées dans la structures"
+msgstr "Fonctions occupées dans la structures"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__to_migrate
@@ -363,7 +363,7 @@ msgstr "Code postal"
 #. module: partner_profiles
 #: model:ir.model,name:partner_profiles.model_create_position_profile
 msgid "create Position Profile"
-msgstr "créer un profil Position"
+msgstr "créer une fiche fonction"
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
