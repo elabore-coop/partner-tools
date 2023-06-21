@@ -49,9 +49,9 @@ msgstr ""
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
-msgid "<span>Please find here <strong>all</strong> the profiles/addresses/contacts\n"
-"                            linked to this main profile. Contact creation from this tab <strong>only\n"
-"                            generates new main profiles</strong>.</span>"
+msgid "<span>Please find here <strong>all</strong> the addresses/contacts linked to\n"
+"                            this main profile. Contact creation from this tab <strong>only\n"
+"                                generates new main profiles</strong>.</span>"
 msgstr ""
 
 #. module: partner_profiles
