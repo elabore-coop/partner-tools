@@ -3,7 +3,7 @@
 
 {
     "name": "partner_profiles",
-    "version": "12.0.2.3.1",
+    "version": "12.0.2.4.0",
     "author": "Elabore",
     "website": "https://elabore.coop",
     "maintainer": "Stéphan Sainléger",
