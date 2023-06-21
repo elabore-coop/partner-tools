@@ -41,15 +41,15 @@ class res_partner(models.Model):
     @api.depends(
         "other_contact_ids",
         "other_contact_ids.edit_structure_profiles",
-        "child_ids",
-        "child_ids.edit_structure_profiles",
+        "structure_position_ids",
+        "structure_position_ids.edit_structure_profiles",
     )
     def _compute_can_read_edit(self):
         for partner in self:
-            partner.can_edit_structure_profiles_ids = partner.child_ids.filtered(
+            partner.can_edit_structure_profiles_ids = partner.structure_position_ids.filtered(
                 "edit_structure_profiles"
             ).mapped("contact_id")
-            partner.child_main_contact_ids = partner.child_ids.mapped("contact_id")
+            partner.child_main_contact_ids = partner.structure_position_ids.mapped("contact_id")
 
     @api.depends("user_ids")
     def _compute_odoo_user_id(self):
