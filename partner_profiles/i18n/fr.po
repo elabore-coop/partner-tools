@@ -101,6 +101,12 @@ msgid "Contact"
 msgstr ""
 
 #. module: partner_profiles
+#: model:ir.model.fields,field_description:partner_profiles.field_res_partner__child_ids
+#: model:ir.model.fields,field_description:partner_profiles.field_res_users__child_ids
+msgid "Contacts"
+msgstr ""
+
+#. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "Country"
 msgstr "Pays"

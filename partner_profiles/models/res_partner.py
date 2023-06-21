@@ -39,7 +39,9 @@ class res_partner(models.Model):
     other_contact_ids = fields.One2many(
         domain=[("is_position_profile", "=", True)]
     )
-
+    child_ids = fields.One2many(
+        domain=[("is_position_profile", "=", False)]
+    )
     structure_position_ids = fields.One2many('res.partner', 'parent_id', string="Structure's positions", domain=[('active', '=', True), ('is_position_profile', '=', True)])
 
     @api.depends("partner_profile", "other_contact_ids")
@@ -87,7 +89,7 @@ class res_partner(models.Model):
     def _onchange_is_company(self):
         for partner in self:
             if partner.is_main_profile:
-                if partner.has_position or partner.child_ids.filtered(lambda c: c.is_position_profile):
+                if partner.has_position or partner.structure_position_ids.filtered(lambda c: c.is_position_profile):
                     raise UserError("You can not modify the partner company type when the parner has postion profiles associated. Please remove the position profiles before retrying.")
                 if partner.public_profile_id:
                     # public_partner = self.env["res.partner"].browse(partner.public_profile_id)[0]
@@ -138,9 +140,8 @@ class res_partner(models.Model):
         for partner in self:
             if partner.is_company:
                 # Delete position profiles linked to the company main profile
-                child_ids = self.env["res.partner"].search([("parent_id", "=", partner.id), ("is_position_profile", "=", True)])
-                for child in child_ids:
-                        child.unlink()
+                for position in self.structure_position_ids:
+                        position.unlink()
         return super(res_partner, self).unlink()
 
     @api.multi
