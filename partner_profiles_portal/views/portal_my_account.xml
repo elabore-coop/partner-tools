@@ -21,7 +21,10 @@
                         <div class="row" id="name">
                             <div
                                 t-attf-class="form-group #{error.get('main_name') and 'o_has_error' or ''} col-xl-12">
-                                <label class="col-form-label" for="main_name">Your Name</label>
+                                <label t-if="partner.is_company" class="col-form-label"
+                                    for="main_name">Structure's name</label>
+                                <label t-if="not partner.is_company" class="col-form-label"
+                                    for="main_name">Firstname and Lastname</label>
                                 <input type="text" name="main_name" required="True"
                                     t-attf-class="form-control #{error.get('main_name') and 'is-invalid' or ''}"
                                     t-att-value="main_name or partner.name" />
