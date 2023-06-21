@@ -18,7 +18,7 @@ msgstr ""
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
 msgid "'s position in the structure"
-msgstr " - Poste dans la structure"
+msgstr " - Fonction dans la structure"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
@@ -55,7 +55,7 @@ msgstr "<small>- La modification entraîne une déconnexion. Reconnectez-vous en
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
 msgid "<span class=\"d-none d-md-inline\">Function</span>"
-msgstr "<span class=\"d-none d-md-inline\">Poste occupé</span>"
+msgstr "<span class=\"d-none d-md-inline\">Fonction occupée</span>"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
@@ -70,7 +70,7 @@ msgstr "<span class=\"d-none d-md-inline\">Nom de la structure</span>"
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
 msgid "<span class=\"fa fa-arrow-left\"/> Back to my positions list"
-msgstr "<span class=\"fa fa-arrow-left\"/> Retour à la liste des positions"
+msgstr "<span class=\"fa fa-arrow-left\"/> Retour à la liste des fonctions"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
@@ -170,7 +170,7 @@ msgstr "Courriel :"
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "Function:"
-msgstr "Poste occupé :"
+msgstr "Fonction occupée :"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_details_profiles
@@ -223,12 +223,12 @@ msgstr "Mobile :"
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
 msgid "My Position Details"
-msgstr "Détail de la position"
+msgstr "Détail de la fonction"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
 msgid "My Positions"
-msgstr "Mes positions"
+msgstr "Mes fonctions"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
@@ -249,7 +249,7 @@ msgstr "Mes informations"
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
 msgid "My positions"
-msgstr "Mes positions"
+msgstr "Mes fonctions"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
@@ -387,7 +387,7 @@ msgstr "Vous n'êtes lié à aucune structure."
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
 msgid "You do not have any positions in your structure."
-msgstr "Vous n'avez pas de positions occupées dans votre structure."
+msgstr "Vous n'avez pas de fonctions occupées dans votre structure."
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
@@ -402,7 +402,7 @@ msgstr "Votre Nom"
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
 msgid "Your position in the structure"
-msgstr "Votre poste dans la structure"
+msgstr "Votre fonction dans la structure"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
@@ -433,7 +433,7 @@ msgstr "Zip / Code postal"
 #. module: partner_profiles_portal
 #: model:ir.model,name:partner_profiles_portal.model_create_position_profile
 msgid "create Position Profile"
-msgstr "créer un profil Position"
+msgstr "créer une fiche fonction"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_position
