@@ -25,6 +25,7 @@
                                     for="main_name">Structure's name</label>
                                 <label t-if="not partner.is_company" class="col-form-label"
                                     for="main_name">Firstname and Lastname</label>
+                                <label class="text-danger"> *</label>
                                 <input type="text" name="main_name" required="True"
                                     t-attf-class="form-control #{error.get('main_name') and 'is-invalid' or ''}"
                                     t-att-value="main_name or partner.name" />
@@ -59,6 +60,7 @@
                                 <div
                                     t-attf-class="form-group #{error.get('main_email') and 'o_has_error' or ''} col-xl-6">
                                     <label class="col-form-label" for="main_email">Email</label>
+                                    <label class="text-danger"> *</label>
                                     <small>- Modification causes log out. Sign in just after!</small>
                                     <input type="email" name="main_email" required="True"
                                         t-attf-class="form-control #{error.get('main_email') and 'is-invalid' or ''}"
@@ -93,6 +95,7 @@
                                 <div
                                     t-attf-class="form-group #{error.get('main_country_id') and 'o_has_error' or ''} col-xl-6">
                                     <label class="col-form-label" for="main_country_id">Country</label>
+                                    <label class="text-danger"> *</label>
                                     <select name="main_country_id" required="True"
                                         t-attf-class="form-control #{error.get('main_country_id') and 'is-invalid' or ''}">
                                         <option value="">Country...</option>
@@ -161,6 +164,7 @@
                                         t-attf-class="form-group #{error.get('public_name') and 'o_has_error' or ''} col-xl-12">
                                         <label class="col-form-label" for="public_name">Name /
                                             Nickname</label>
+                                        <label class="text-danger"> *</label>
                                         <input type="text" name="public_name" required="True"
                                             t-attf-class="form-control #{error.get('public_name') and 'is-invalid' or ''}"
                                             t-att-value="public_name  or public_partner.name" />
