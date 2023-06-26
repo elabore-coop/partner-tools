@@ -262,7 +262,7 @@ class res_partner(models.Model):
     @api.model
     def _cron_generate_missing_public_profiles(self):
         partners = self.search(
-            [("is_main_profile", "=", True), ("public_profile_id", "=", False)]
+            [("is_main_profile", "=", True), ("public_profile_id", "=", False), ("type", "=", "contact")]
         )
         for partner in partners:
             partner.create_public_profile()
@@ -277,7 +277,8 @@ class res_partner(models.Model):
         search_values = [
             ("is_company", "=", is_company),
             ("active", "=", active),
-            ("partner_profile", "=", False)
+            ("partner_profile", "=", False),
+            ("type", "=", "contact")
         ]
         if id:
             search_values.append(("id", "=", id))
@@ -328,6 +329,7 @@ class res_partner(models.Model):
     def _get_main_partner_search_values(self, partner):
         return [
             ("active", "=", True),
+            ("type", "=", "contact"),
             ("is_main_profile", "=", True),
             ("is_company", "=", False),
             "|",
