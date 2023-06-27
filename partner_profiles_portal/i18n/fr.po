@@ -228,7 +228,7 @@ msgstr "Détail de la fonction"
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
 msgid "My Positions"
-msgstr "Mes fonctions"
+msgstr "Mon équipe"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_structure
@@ -249,7 +249,7 @@ msgstr "Mes informations"
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_positions
 msgid "My positions"
-msgstr "Mes fonctions"
+msgstr "Mon équipe"
 
 #. module: partner_profiles_portal
 #: model_terms:ir.ui.view,arch_db:partner_profiles_portal.portal_my_home_profile_menu
