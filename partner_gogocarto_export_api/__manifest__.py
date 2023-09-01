@@ -3,8 +3,8 @@
     'summary': '''HTTP JSON api to send partner data for Gogocarto import''',
     'license': 'AGPL-3',
     'author': (
-        'Lokavaluto,'
-        'Odoo Community Association (OCA)'
+        'Lokavaluto',
+        'Elabore'
     ),
     'website': 'https://lokavaluto.fr',
     'category': 'Localization',
