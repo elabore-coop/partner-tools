@@ -7,7 +7,7 @@ class ResPartner(models.Model):
     """ Inherits partner, adds Gogocarto fields in the partner form, and functions"""
     _inherit = 'res.partner'
 
-    in_gogocarto = fields.Boolean('In gogocarto')
+    in_gogocarto = fields.Boolean('Export to Gogocarto')
 
     def _get_gogocarto_domain(self, company_id):
         # To OVERRIDE in sub_modules to customize the partner selection
