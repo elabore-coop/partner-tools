@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('settings')]" position="inside">
                 <div class="app_settings_block" data-string="Gogocarto" string="Gogocarto"
-                    data-key="gogocarto">
+                    data-key="partner_gogocarto_export_api">
                     <h2>Gogocarto export configuration</h2>
                     <div class="text-muted mt16 o_settings_container">
                         Check the export on /web/{COMPANY_ID}/get_http_gogocarto_elements.
