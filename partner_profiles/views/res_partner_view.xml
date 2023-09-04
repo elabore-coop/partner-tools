@@ -173,7 +173,7 @@
                 <!-- PUBLIC PROFILE DISPLAY -->
                 <!-- ###################### -->
                 <xpath expr="//field[@name='type']/../.." position="after">
-                    <group attrs="{'invisible': [('is_public_profile','=',False)]}">
+                    <group id="public_data" attrs="{'invisible': [('is_public_profile','=',False)]}">
                         <group>
                             <label for="street" string="Address" />
                             <div class="o_address_format">
@@ -210,7 +210,8 @@
                 <!-- POSITION PROFILE DISPLAY -->
                 <!-- ######################## -->
                 <xpath expr="//field[@name='type']/../.." position="after">
-                    <group attrs="{'invisible': [('is_position_profile','=',False)]}">
+                    <group id="position_data"
+                        attrs="{'invisible': [('is_position_profile','=',False)]}">
                         <group>
                             <field name="function" />
                         </group>
