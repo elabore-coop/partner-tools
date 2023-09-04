@@ -1,6 +1,4 @@
 from odoo import models, fields
-import logging
-_logger = logging.getLogger(__name__)
 
 
 class ResPartner(models.Model):
@@ -13,9 +11,9 @@ class ResPartner(models.Model):
         # To OVERRIDE in sub_modules to customize the partner selection
         return [('in_gogocarto', '=', True)]
 
-    def _get_gogocarto_parser(self, company_id):
+    def _get_generic_parser(self, fields):
         parser = []
-        for field in self._get_export_fields(company_id):
+        for field in fields:
             if field.ttype in [
                     "boolean",
                     "char",
@@ -35,6 +33,11 @@ class ResPartner(models.Model):
                 continue  # Not developped so far
             else:
                 continue
+        return parser
+
+    def _get_gogocarto_parser(self, company_id):
+        fields = self._get_export_fields(company_id)
+        parser = self._get_generic_parser(fields)
         return parser
 
     def _get_export_fields(self, company_id):
