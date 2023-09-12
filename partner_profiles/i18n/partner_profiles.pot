@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-13 15:24+0000\n"
-"PO-Revision-Date: 2023-06-13 15:24+0000\n"
+"POT-Creation-Date: 2023-09-12 15:02+0000\n"
+"PO-Revision-Date: 2023-09-12 15:02+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -338,6 +338,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__structure_position_ids
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__structure_position_ids
 msgid "Structure's positions"
+msgstr ""
+
+#. module: partner_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
+msgid "Sync data"
+msgstr ""
+
+#. module: partner_profiles
+#: model:ir.actions.server,name:partner_profiles.sync_public_data_action_server
+msgid "Synchronize main and public data"
 msgstr ""
 
 #. module: partner_profiles
