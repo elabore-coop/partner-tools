@@ -255,6 +255,22 @@ class res_partner(models.Model):
             args.append(("is_public_profile", "=", False))
         return super(res_partner, self).name_search(name, args, operator, limit)
 
+    @api.multi
+    def sync_admin_and_public_data(self):
+        for partner in self:
+            if partner.is_main_profile and partner.public_profile_id:
+                main_partner = partner
+                public_partner = partner.public_profile_id
+            elif partner.is_public_profile and partner.contact_id:
+                main_partner = partner.contact_id
+                public_partner = partner
+
+            public_fields = partner._get_public_profile_fields()
+            values = {}
+            for field_name in public_fields:
+                values[field_name] = main_partner._get_field_value(field_name)
+            public_partner.write(values)
+
     ##################################################################################
     ## Planned actions
     ##################################################################################

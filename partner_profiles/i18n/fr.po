@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-13 15:25+0000\n"
-"PO-Revision-Date: 2023-06-13 15:25+0000\n"
+"POT-Creation-Date: 2023-09-12 15:03+0000\n"
+"PO-Revision-Date: 2023-09-12 15:03+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -73,7 +73,7 @@ msgstr "<span>Vous trouverez ici <strong>tou(te)s</strong> les adresses/contacts
 msgid "<span>You are about to create a <strong>Position Profile</strong> which\n"
 "                            represents the role or the job of a person in a structure.</span>"
 msgstr "<span>Vous allez créer une <strong>fiche Fonction</strong> qui\n"
-"                            représente le rôle que tient une personne au sein d'une structure.</span>""
+"                            représente le rôle que tient une personne au sein d'une structure.</span>\""
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
@@ -337,12 +337,12 @@ msgstr "État"
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "Street 2..."
-msgstr "Rue 2 ..."
+msgstr "Rue 2..."
 
 #. module: partner_profiles
 #: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
 msgid "Street..."
-msgstr "Rue.."
+msgstr "Rue..."
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_create_position_profile__structure_id
@@ -354,6 +354,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:partner_profiles.field_res_users__structure_position_ids
 msgid "Structure's positions"
 msgstr "Fonctions occupées dans la structures"
+
+#. module: partner_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles.partner_profiles_form_view
+msgid "Sync data"
+msgstr "Synchroniser"
+
+#. module: partner_profiles
+#: model:ir.actions.server,name:partner_profiles.sync_public_data_action_server
+msgid "Synchronize main and public data"
+msgstr "Synchroniser les données publiques"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__to_migrate
