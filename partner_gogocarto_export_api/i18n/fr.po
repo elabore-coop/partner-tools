@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-04 06:59+0000\n"
-"PO-Revision-Date: 2023-09-04 06:59+0000\n"
+"POT-Creation-Date: 2023-09-12 14:05+0000\n"
+"PO-Revision-Date: 2023-09-12 14:05+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 #. module: partner_gogocarto_export_api
 #: model_terms:ir.ui.view,arch_db:partner_gogocarto_export_api.res_config_settings_view_form_gogocarto
 msgid "Check the export on /web/{COMPANY_ID}/get_http_gogocarto_elements."
-msgstr "Vérifiez l'export sur /web/{COMPANY_ID}/get_http_gogocarto_elements.""
+msgstr "Vérifiez l'export sur /web/{COMPANY_ID}/get_http_gogocarto_elements.\""
 
 #. module: partner_gogocarto_export_api
 #: model:ir.model,name:partner_gogocarto_export_api.model_res_company
@@ -47,16 +47,6 @@ msgid "Export to Gogocarto"
 msgstr "Exporter dans Gogocarto"
 
 #. module: partner_gogocarto_export_api
-#: model_terms:ir.ui.view,arch_db:partner_gogocarto_export_api.partner_gogocarto_form_view
-msgid "Geolocate"
-msgstr "Géolocaliser"
-
-#. module: partner_gogocarto_export_api
-#: model_terms:ir.ui.view,arch_db:partner_gogocarto_export_api.partner_gogocarto_form_view
-msgid "Geolocation"
-msgstr "Géolocalisation"
-
-#. module: partner_gogocarto_export_api
 #: model:ir.model.fields,field_description:partner_gogocarto_export_api.field_res_config_settings__export_gogocarto_fields
 msgid "GogoCarto Exported fields"
 msgstr "Champs exportés dans Gogocarto"
@@ -67,7 +57,6 @@ msgid "GogoCarto Setup"
 msgstr "Gogocarto"
 
 #. module: partner_gogocarto_export_api
-#: model_terms:ir.ui.view,arch_db:partner_gogocarto_export_api.partner_gogocarto_form_view
 #: model_terms:ir.ui.view,arch_db:partner_gogocarto_export_api.res_config_settings_view_form_gogocarto
 msgid "Gogocarto"
 msgstr ""
