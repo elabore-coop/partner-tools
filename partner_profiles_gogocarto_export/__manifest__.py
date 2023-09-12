@@ -25,7 +25,6 @@
     },
     # always loaded
     "data": [
-        "views/res_partner.xml",
         "views/config_settings_view.xml",
         "views/res_company_view.xml",
     ],
