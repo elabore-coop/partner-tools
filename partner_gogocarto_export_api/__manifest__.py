@@ -8,11 +8,12 @@
     ),
     'website': 'https://lokavaluto.fr',
     'category': 'Localization',
-    'version': '12.0.1.1.0',
+    'version': '12.0.2.0.0',
     'depends': [
         'base',
         'contacts',
         'base_geolocalize',
+        'partner_geolocalize_usability',
         'base_jsonify',
     ],
     'data': [
