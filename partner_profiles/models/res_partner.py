@@ -140,7 +140,7 @@ class res_partner(models.Model):
         for partner in self:
             if partner.is_company:
                 # Delete position profiles linked to the company main profile
-                for position in self.structure_position_ids:
+                for position in partner.structure_position_ids:
                         position.unlink()
         return super(res_partner, self).unlink()
 
