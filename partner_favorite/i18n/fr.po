@@ -1,0 +1,45 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* partner_favorite
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-10 20:53+0000\n"
+"PO-Revision-Date: 2021-05-10 20:53+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_favorite
+#: model:ir.model,name:partner_favorite.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: partner_favorite
+#: model:ir.model.fields,help:partner_favorite.field_res_partner__is_favorite
+#: model:ir.model.fields,help:partner_favorite.field_res_users__is_favorite
+msgid "Display this partner with favorite filter"
+msgstr "Afficher les partenaires favoris"
+
+#. module: partner_favorite
+#: model:ir.model.fields,field_description:partner_favorite.field_res_partner__favorite_user_ids
+#: model:ir.model.fields,field_description:partner_favorite.field_res_users__favorite_user_ids
+msgid "Members"
+msgstr "Membres"
+
+#. module: partner_favorite
+#: model_terms:ir.ui.view,arch_db:partner_favorite.view_partner_search_favorite
+msgid "My Favorites"
+msgstr "Mes favoris"
+
+#. module: partner_favorite
+#: model:ir.model.fields,field_description:partner_favorite.field_res_partner__is_favorite
+#: model:ir.model.fields,field_description:partner_favorite.field_res_users__is_favorite
+msgid "Show Favorite Partner"
+msgstr "Afficher les partenaire favoris"
+
