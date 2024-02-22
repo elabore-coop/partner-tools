@@ -22,8 +22,9 @@
         <field name="inherit_id" ref="base.view_res_partner_filter"/>
         <field name="arch" type="xml">
             <data>
-                <filter name="filter_my_partners" position="after">
+                <filter name="type_person" position="before">
                     <filter string="My Favorites" name="my_partners" domain="[('favorite_user_ids', 'in', uid)]"/>
+                    <separator />
                 </filter>
             </data>
         </field>

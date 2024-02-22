@@ -3,7 +3,7 @@
 {
     'name': 'Partner Favorite',
     'summary': "Add favorite star on Partner, and filter for favorite",
-    'version': '12.0.1.1.0',
+    'version': "16.0.1.0.0",
     'author': "Nicolas JEUDY, "
               "Myceliandre, "
               "Lokavaluto, "
