@@ -23,14 +23,13 @@ class ResPartner(models.Model):
                     "selection",
                     "float",
                     "date_time",
-                    "date"]:
+                    "date",
+                    "html"]:
                 parser.append(field.name)
             elif field.ttype in ["many2one", "one2many", "many2many"]:
                 parser.append((field.name, ['id', 'name']))
             elif field.ttype == "binary":
                 continue
-            elif field.ttype == "html":
-                continue  # Not developped so far
             else:
                 continue
         return parser
