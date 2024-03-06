@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="partner_profile_view_tree" model="ir.ui.view">
+        <field name="name">partner.profile.view.tree</field>
+        <field name="model">partner.profile</field>
+        <field name="arch" type="xml">
+            <tree string="Partner profiles">
+                <field name="name" />
+                <field name="ref" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="partner_profile_action" model="ir.actions.act_window">
+        <field name="name">Partner Profiles</field>
+        <field name="res_model">partner.profile</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem id="menu_partner_profiles" action="partner_profile_action"
+        parent="contacts.res_partner_menu_config" sequence="1" name="Partner profiles"
+        groups="base.group_no_one" />
+</odoo>

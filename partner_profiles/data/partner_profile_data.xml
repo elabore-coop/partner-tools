@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="partner_profile_main" model="partner.profile">
+            <field name="name">Main Profile</field>
+            <field name="ref">partner_profile_main</field>
+        </record>
+
+        <record id="partner_profile_public" model="partner.profile">
+            <field name="name">Public Profile</field>
+            <field name="ref">partner_profile_public</field>
+        </record>
+
+        <record id="partner_profile_position" model="partner.profile">
+            <field name="name">Position Profile</field>
+            <field name="ref">partner_profile_position</field>
+        </record>
+    </data>
+</odoo>
