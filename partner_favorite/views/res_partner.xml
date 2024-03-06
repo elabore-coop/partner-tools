@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_form_favorite" model="ir.ui.view">
+        <field name="name">Add favorite star</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+        <field name="arch" type="xml">
+            <data>
+                <field name="type" position="after">
+                    <field name="is_favorite"/>
+                </field>
+                <xpath expr="//strong/field[@name='display_name']" position="before">
+                    <span class="o_right"><field name="is_favorite" widget="boolean_favorite" nolabel="1" force_save="1" /></span>
+                </xpath>
+            </data>
+        </field>
+    </record>
+    <record id="view_partner_search_favorite" model="ir.ui.view">
+        <field name="name">Add favorite star</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <data>
+                <filter name="type_person" position="before">
+                    <filter string="My Favorites" name="my_partners" domain="[('favorite_user_ids', 'in', uid)]"/>
+                    <separator />
+                </filter>
+            </data>
+        </field>
+    </record>
+</odoo>
