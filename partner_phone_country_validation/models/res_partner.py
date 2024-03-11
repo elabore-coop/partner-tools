@@ -1,6 +1,9 @@
 from odoo import api, models, _
 from odoo.addons.partner_phone_country_validation.tools.get_country_from_phone_number import get_country_from_phone_number
 from odoo.exceptions import ValidationError
+import logging
+
+_logger = logging.getLogger(__name__)
 
 class Partner(models.Model):
     _name = 'res.partner'
@@ -26,11 +29,11 @@ class Partner(models.Model):
     @api.onchange('mobile', 'country_id', 'company_id')
     def _onchange_mobile_validation(self):
         # If no country is found, we define the country based on the beginning of the number
-        if not self.country_id:
+        if not self.country_id and self.mobile:
             self.country_id = self.env['res.country'].search(
-                [('code', '=', get_country_from_phone_number(self.phone))], limit=1
+                [('code', '=', get_country_from_phone_number(self.mobile))], limit=1
             )
-        if self.mobile:
-            if self.phone.startswith("00") or self.phone.startswith('+'):
+        if self.mobile:            
+            if self.mobile.startswith("00") or self.mobile.startswith('+'):
                 return
             self.mobile = self.phone_format(self.mobile)

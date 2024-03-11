@@ -9,7 +9,7 @@
     "maintainer": "Boris Gallet",
     "license": "AGPL-3",
     "category": "Tools",
-    "summary": "Check the correct format of phone according to country when partner creation/validation",
+    "summary": "Format phone number according with country and select good country depending on phone if country empty",
     # any module necessary for this one to work correctly
     "depends": [
         "base",
