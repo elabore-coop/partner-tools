@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="partner_profiles_form_view" model="ir.ui.view">
+            <field name="name">Partner Profiles Form View</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="priority">99</field>
+            <field name="arch" type="xml">
+                <!-- Main display -->
+                <xpath expr="//group[@name='profile_status']/field[@name='contact_id']"
+                    position="before">
+                    <field name="odoo_user_id" string="Associated User" readonly="1"
+                        attrs="{'invisible': [('is_main_profile','=',False)]}" />
+                </xpath>
+                <xpath expr="//group[@name='profile_status']" position="after">
+                    <group name="structure_access_rights"
+                        attrs="{'invisible': ['|', ('is_position_profile','=',False), ('parent_id','=',False)]}">
+                        <field name="edit_structure_profiles" />
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

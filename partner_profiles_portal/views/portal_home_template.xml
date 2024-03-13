@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_my_home_profile_menu" name="Portal My Home: Profile Menu"
+        inherit_id="portal.portal_layout" priority="40">
+        <xpath expr="//div[hasclass('o_portal_my_details')]" position="replace">
+            <div class="o_portal_my_details">
+                <h4>Your Details </h4>
+                <hr class="mt-1 mb-0" />
+                <div class="mb8" t-field="user_id.partner_id"
+                    t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;email&quot;, &quot;phone&quot;, &quot;address&quot;, &quot;name&quot;]}" />
+                <div name="profiles_management">
+                    <div id="account">
+                        <a t-attf-href="/my/account">
+                            <button class="btn btn-primary mb8">
+                                My information
+                            </button>
+                        </a>
+                    </div>
+                    <div
+                        id="structures" t-if="not user_id.partner_id.is_company">
+                        <a t-attf-href="/my/structures">
+                            <button class="btn btn-primary mb8">
+                                My structures
+                            </button>
+                        </a>
+                    </div>
+                    <div
+                        id="positions" t-if="user_id.partner_id.is_company">
+                        <a t-attf-href="/my/positions">
+                            <button class="btn btn-primary mb8">
+                                My positions
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
