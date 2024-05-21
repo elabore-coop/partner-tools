@@ -6,7 +6,7 @@
       <field name="inherit_id" ref="base.view_company_form"/>
       <field name='priority'>99</field>
       <field name="arch" type="xml">
-        <xpath expr="//notebook" posiion="inside">
+        <xpath expr="//notebook" position="inside">
             <page string="GogoCarto Setup" name="gogocarto">
                 <group>
                     <field name="export_gogocarto_fields"/>
