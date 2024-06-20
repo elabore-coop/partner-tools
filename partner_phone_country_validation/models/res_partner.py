@@ -11,8 +11,9 @@ class Partner(models.Model):
 
     @api.constrains('country_id','phone','mobile')
     def _check_country_id(self):
-        if not self.country_id and (self.phone or self.mobile):
-            raise ValidationError(_('You must set a country for the phone number'))
+        for partner in self:
+            if not partner.country_id and not partner.parent_id.country_id and (partner.phone or partner.mobile):
+                raise ValidationError(_('You must set a country for the phone number of %s'%(partner.name,)))
         
     @api.onchange('country_id')
     def _onchange_country(self):
