@@ -11,6 +11,22 @@ class Partner(models.Model):
 
     @api.constrains('country_id','phone','mobile')
     def _check_country_id(self):
+        
+        #if come back quote creation from lead, update partner
+        country = False
+        if self._context.get("default_type") == 'opportunity' and self._context.get("params").get("model") == "crm.lead":
+            lead = self.env["crm.lead"].browse(self._context.get("params").get("id"))
+            country = lead.country_id
+            for partner in self:
+                if not country and (partner.phone or partner.mobile):
+                    if self.phone:
+                        partner.set_country_from_phone_number(partner.phone)
+                    if self.mobile:
+                        partner.set_country_from_phone_number(partner.mobile)
+                elif country:
+                    partner.country_id = country
+                            
+        #check country and raise error
         for partner in self:
             if not partner.country_id and not partner.parent_id.country_id and (partner.phone or partner.mobile):
                 raise ValidationError(_('You must set a country for the phone number of %s'%(partner.name,)))
