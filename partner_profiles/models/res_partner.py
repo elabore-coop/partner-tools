@@ -232,6 +232,7 @@ class res_partner(models.Model):
                     "contact_id": partner.id,
                     "partner_profile": profile.id,
                     "company_id": partner.company_id.id,
+                    "is_company": partner.is_company,
                 }
                 public_fields = partner._get_public_profile_fields()
                 for field_name in public_fields:
