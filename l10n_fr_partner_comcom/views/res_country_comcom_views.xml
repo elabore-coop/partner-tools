@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_country_comcom_tree" model="ir.ui.view">
+        <field name="name">Comcom tree</field>
+        <field name="model">res.country.comcom</field>
+        <field name="arch" type="xml">
+            <tree string="Communautés de communes" editable="bottom">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_country_comcom" model="ir.actions.act_window">
+        <field name="name">Communautés de commune</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.country.comcom</field>                
+    </record>
+
+    <menuitem id="menu_country_comcom"
+        action="action_country_comcom"
+        name="Communautés de communes"
+        sequence="1" parent="contacts.menu_localisation"/>
+
+</odoo>

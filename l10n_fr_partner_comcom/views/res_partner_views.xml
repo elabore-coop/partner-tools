@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_form_comcom" model="ir.ui.view">
+        <field name="name">Partner Form: add comcom</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <field name="city" position="after">
+                    <field name="comcom_ids" widget="many2many_tags" class="o_address_street" placeholder="Communauté de communes" />
+                </field>
+            </data>
+        </field>
+    </record>
+
+    <record id="view_partner_search_comcom" model="ir.ui.view">
+        <field name="name">Partner search: add comcom</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <data>
+                <field name="user_id" position="after">                    
+                    <separator />
+                    <field name="comcom_ids" />
+                </field>
+            </data>
+        </field>
+    </record>
+</odoo>
