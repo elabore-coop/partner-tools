@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partner_kanban_skills" model="ir.ui.view">
+        <field name="name">Add skills on partner kanban view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+        <field name="arch" type="xml">
+            <data>
+                <field name="category_id" position="after">
+                    <field name="skill_ids"/>
+                </field>
+                <xpath expr="//div[hasclass('oe_kanban_partner_categories')]" position="inside">
+                    <span class="oe_kanban_list_many2many">
+                        <field name="skill_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                    </span>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="view_partner_form_skills" model="ir.ui.view">
+        <field name="name">Add skills on partner form view</field>
+        <field name="model">res.partner</field>
+        <field name="priority">13</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <field name="category_id" position="after">
+                    <field name="skill_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"
+                        placeholder='e.g. "Project management", ...'/>
+                </field>
+            </data>
+        </field>
+    </record>
+
+    <record id="view_partner_search_favorite" model="ir.ui.view">
+        <field name="name">Add favorite star</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <data>
+                <field name="category_id" position="after">
+                    <field name="skill_ids" string="Skill" operator="child_of"/>
+                    <separator />
+                </field>
+            </data>
+        </field>
+    </record>
+</odoo>

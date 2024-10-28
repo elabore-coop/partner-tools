@@ -1,0 +1,143 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_skills
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-28 08:49+0000\n"
+"PO-Revision-Date: 2024-10-28 08:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: partner_skills
+#: model_terms:ir.ui.view,arch_db:partner_skills.res_partner_skill_view_search
+msgid "Archived"
+msgstr "Archivé"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__child_ids
+msgid "Child Skills"
+msgstr "Sous-Compétences"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__color
+msgid "Color"
+msgstr "Couleur"
+
+#. module: partner_skills
+#: model:ir.model,name:partner_skills.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: partner_skills
+#: model_terms:ir.actions.act_window,help:partner_skills.action_partner_skill_form
+msgid "Create a Skill"
+msgstr "Créer une compétence"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__create_uid
+msgid "Created by"
+msgstr "Créée par"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__create_date
+msgid "Created on"
+msgstr "Crée le"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__display_name
+msgid "Display Name"
+msgstr "Nom"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__id
+msgid "ID"
+msgstr "ID"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__parent_path
+msgid "Parent Path"
+msgstr "Chemin parent"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__parent_id
+msgid "Parent Skill"
+msgstr "Compétence parente"
+
+#. module: partner_skills
+#: model:ir.model,name:partner_skills.model_res_partner_skill
+msgid "Partner skill"
+msgstr "Compétence des partenaires"
+
+#. module: partner_skills
+#: model_terms:ir.ui.view,arch_db:partner_skills.res_partner_skill_view_search
+msgid "Search Partner Skills"
+msgstr "Recherche Compétences des partenaires"
+
+#. module: partner_skills
+#: model_terms:ir.ui.view,arch_db:partner_skills.view_partner_search_favorite
+#: model_terms:ir.ui.view,arch_db:partner_skills.view_partner_skill_form
+msgid "Skill"
+msgstr "Compétence"
+
+#. module: partner_skills
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner_skill__name
+msgid "Skill Name"
+msgstr "Nom de la compétence"
+
+#. module: partner_skills
+#: model:ir.actions.act_window,name:partner_skills.action_partner_skill_form
+#: model:ir.model.fields,field_description:partner_skills.field_res_partner__skill_ids
+#: model:ir.model.fields,field_description:partner_skills.field_res_users__skill_ids
+#: model:ir.ui.menu,name:partner_skills.menu_partner_skill_form
+#: model_terms:ir.ui.view,arch_db:partner_skills.view_partner_skill_list
+msgid "Skills"
+msgstr "Compétences"
+
+#. module: partner_skills
+#: model:ir.model.fields,help:partner_skills.field_res_partner_skill__active
+msgid "The active field allows you to hide the skill without removing it."
+msgstr "Le champ actif vous permet de cacher la compétence sans la supprimer."
+
+#. module: partner_skills
+#. odoo-python
+#: code:addons/partner_skills/models/res_partner_skill.py:0
+#, python-format
+msgid "You can not create recursive skills."
+msgstr "Vous ne pouvez pas créer de compétences récursives."
+
+#. module: partner_skills
+#: model_terms:ir.ui.view,arch_db:partner_skills.view_partner_skill_form
+msgid "e.g. \"Project management\""
+msgstr "ex: \"Gestion de projet\""
+
+#. module: partner_skills
+#: model_terms:ir.ui.view,arch_db:partner_skills.view_partner_form_skills
+msgid "e.g. \"Project management\", ..."
+msgstr "ex: \"Gestion de projet\""
