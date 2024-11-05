@@ -9,4 +9,4 @@ class ResPartner(models.Model):
     
     _inherit = 'res.partner'
 
-    comcom_ids = fields.Many2many('res.country.comcom')
+    comcom_id = fields.Many2one('res.country.comcom', string="Communauté de commune")

@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
             <data>
                 <field name="city" position="after">
-                    <field name="comcom_ids" widget="many2many_tags" class="o_address_street" placeholder="Communauté de communes" />
+                    <field name="comcom_id" class="o_address_street" placeholder="Communauté de communes" />
                 </field>
             </data>
         </field>
@@ -22,7 +22,7 @@
             <data>
                 <field name="user_id" position="after">                    
                     <separator />
-                    <field name="comcom_ids" />
+                    <field name="comcom_id" />
                 </field>
             </data>
         </field>
