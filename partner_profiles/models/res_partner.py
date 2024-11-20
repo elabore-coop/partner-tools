@@ -287,11 +287,12 @@ class res_partner(models.Model):
         is_company=False, 
         active=True,
         with_parent=False,
+        partner_profile=False
     ):
         search_values = [
             ("is_company", "=", is_company),
             ("active", "=", active),
-            ("partner_profile", "=", False),
+            ("partner_profile", "=", partner_profile),
             ("type", "=", "contact")
         ]
         if id:
@@ -438,3 +439,61 @@ class res_partner(models.Model):
                 )
             count += 1
         _logger.debug("Last clean")
+
+    @api.model
+    def _migration_main_profile_with_parent_and_not_existing_position_profile(
+        self, limit=None, id=False
+    ):
+        partner_profile_main = self.env.ref("partner_profiles.partner_profile_main").id
+
+        partner_profile_position = self.env.ref("partner_profiles.partner_profile_position").id
+
+        # Main Profil migration with parent_id
+        search_values = self._get_concerned_partners_search_values(
+            id,
+            with_parent=True,
+            partner_profile=partner_profile_main,
+        )
+        partners = self.env["res.partner"].search(search_values, limit=limit)
+        _logger.debug("Main profile with parent_id - migration count: %s" % len(partners))
+        count = 0
+
+        for partner in partners:
+            _logger.debug("count: [%s] : %s" % (count, partner.name))
+            existing_position_partner = self.env["res.partner"].search(
+                self._get_position_partner_search_values(partner),
+                limit=1,
+            )
+            if not existing_position_partner:
+                _logger.debug("CREATE Position %s" % partner.name)
+                self.env["res.partner"].create(
+                    {
+                        "name": partner.name,
+                        "contact_id": partner.id,
+                        "partner_profile": partner_profile_position,
+                        "parent_id": partner.parent_id.id,
+                        "is_position_profile": True,
+                    }
+                )
+                _logger.debug("UPDATE Main %s" % partner.name)
+                # partner.write(
+                #     {
+                #         "parent_id": False,
+                #     }
+                #)
+            count += 1
+        _logger.debug("### End migration ###")
+
+    def _get_position_partner_search_values(self, partner):
+        return [
+            ("active", "=", True),
+            ("type", "=", "contact"),
+            ("is_position_profile", "=", True),
+            ("is_company", "=", False),
+            ("contact_id", "=", partner.id),
+            "|",
+            ("name", "=", partner.name),
+            "&",
+            ("email", "!=", False),
+            ("email", "=", partner.email),
+        ]
