@@ -386,3 +386,17 @@ msgstr "créer une fiche fonction"
 msgid "e.g. https://www.odoo.com"
 msgstr "e.x. https://www.odoo.com"
 
+#. module: partner_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles.view_res_partner_filter_profiles
+msgid "Main Profile"
+msgstr "Fiches administratives"
+
+#. module: partner_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles.view_res_partner_filter_profiles
+msgid "Public Profile"
+msgstr "Fiches publiques"
+
+#. module: partner_profiles
+#: model_terms:ir.ui.view,arch_db:partner_profiles.view_res_partner_filter_profiles
+msgid "Position Profile"
+msgstr "Fiches fonctions"

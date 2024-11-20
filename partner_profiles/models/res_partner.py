@@ -437,4 +437,3 @@ class res_partner(models.Model):
                     }
                 )
             count += 1
-        _logger.debug("Last clean")

@@ -1,6 +1,34 @@
 <?xml version="1.0"?>
 <odoo>
     <data>
+        <record id="view_res_partner_filter_profiles" model="ir.ui.view">
+            <field name="name">res.partner.select.contact</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter" />
+            <field name="arch" type="xml">
+                <filter name="type_otherpositions" position="after">
+                    <separator />
+                    <filter
+                        string="Main Profile"
+                        name="type_admin"
+                        context="{'search_show_all_positions': {'is_set': True, 'set_value': True}}"
+                        domain="[('is_main_profile', '=', True)]"
+                    />
+                    <filter
+                    string="Public Profile"
+                    name="type_public"
+                    context="{'search_show_all_positions': {'is_set': True, 'set_value': True}}"
+                    domain="[('is_public_profile', '=', True)]"
+                    />
+                    <filter
+                    string="Position Profile"
+                    name="type_position"
+                    context="{'search_show_all_positions': {'is_set': True, 'set_value': True}}"
+                    domain="[('is_position_profile', '=', True)]"
+                    />
+                </filter>
+            </field>
+        </record>
         <record id="partner_profiles_form_view" model="ir.ui.view">
             <field name="name">Partner Profiles Form View</field>
             <field name="model">res.partner</field>
