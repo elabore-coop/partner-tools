@@ -363,7 +363,7 @@ msgstr "Synchroniser"
 #. module: partner_profiles
 #: model:ir.actions.server,name:partner_profiles.sync_public_data_action_server
 msgid "Synchronize main and public data"
-msgstr "Synchroniser les données publiques"
+msgstr "Synch fiches pub/admin"
 
 #. module: partner_profiles
 #: model:ir.model.fields,field_description:partner_profiles.field_res_partner__to_migrate

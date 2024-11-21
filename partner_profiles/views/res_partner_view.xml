@@ -281,6 +281,7 @@
         <record id="sync_public_data_action_server" model="ir.actions.server">
             <field name="name">Synchronize main and public data</field>
             <field name="model_id" ref="model_res_partner" />
+            <field name="binding_model_id" ref="model_res_partner" />
             <field name="groups_id" eval="[(4,ref('base.group_no_one'))]" />
             <field name="state">code</field>
             <field name="code">records.sync_admin_and_public_data() </field>
