@@ -11,4 +11,18 @@
       </xpath>
     </field>
   </record>
+  <!-- Mass Edit Partner field in_gogocarto -->
+  <record id="mass_editing_partner" model="ir.actions.server">
+    <field name="state">mass_edit</field>
+    <field name="name">Mass Edit In Gogocarto Field</field>
+    <field name="model_id" ref="base.model_res_partner" />
+  </record>
+  <record id="mass_editing_partner_in_gogocarto" model="ir.actions.server.mass.edit.line" >
+    <field name="server_action_id" ref="mass_editing_partner" />
+    <field name="field_id" ref="partner_gogocarto_export_api.field_res_partner__in_gogocarto" />
+  </record>
+  <!-- Add context actions -->
+  <function model="ir.actions.server" name="create_action">
+    <value eval="[ref('mass_editing_partner')]" />
+  </function>
 </odoo>
