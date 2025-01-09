@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_skills" model="ir.ui.view">
+        <field name="name">Add extra_contact_ids in dedicated notebook page</field>
+        <field name="model">res.partner</field>
+        <field name="priority">99</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+	  <xpath expr="//field[@name='extra_contact_ids']" position="replace" />
+	  <xpath expr="//notebook/page[1]" position="before">
+	    <!-- page Social Networks -->
+            <page name="social" string="Social networks"
+                  attrs="{'invisible': [('is_main_profile','=',False)]}">
+              <field name="extra_contact_ids" widget="contactInfoWidget" nolabel="True"
+                     colspan="1" />
+            </page>
+	  </xpath>
+        </field>
+    </record>
+</odoo>
