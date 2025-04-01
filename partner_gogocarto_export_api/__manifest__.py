@@ -15,6 +15,7 @@
         'base_geolocalize',
         'partner_geolocalize_usability',
         'jsonifier',
+        'server_action_mass_edit',
     ],
     'data': [
         'views/gogocarto_partner.xml',
