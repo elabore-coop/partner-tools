@@ -9,8 +9,7 @@
 	  <xpath expr="//field[@name='extra_contact_ids']" position="replace" />
 	  <xpath expr="//notebook/page[1]" position="before">
 	    <!-- page Social Networks -->
-            <page name="social" string="Social networks"
-                  attrs="{'invisible': [('is_main_profile','=',False)]}">
+            <page name="social" string="Social networks">
               <field name="extra_contact_ids" widget="contactInfoWidget" nolabel="True"
                      colspan="1" />
             </page>

@@ -3,7 +3,7 @@
 {
     "name": "Partner Complementary Contact Data View",
     "summary": "Add extra_contact_ids in dedicated notebook page",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.0.1",
     "author": "Stéphan Sainléger",
     "license": "AGPL-3",
     "maintainer": "Elabore",
