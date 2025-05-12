@@ -4,6 +4,7 @@
 import logging
 from odoo import _, api, fields, models
 from odoo.exceptions import UserError
+from odoo.osv import expression
 
 _logger = logging.getLogger(__name__)
 
@@ -437,3 +438,25 @@ class res_partner(models.Model):
                     }
                 )
             count += 1
+
+    @api.model
+    def read_group(self, domain, fields, groupby, offset=0, limit=None, orderby=False, lazy=True):
+        #TODO: should be moved in partner_contact_in_several_companies module
+        """Display only standalone contact in domain or having attached contact in domain"""
+        ctx = self.env.context
+        if (
+            ctx.get("search_show_all_positions", {}).get("is_set")
+            and not ctx["search_show_all_positions"]["set_value"]
+        ):
+            domain = expression.normalize_domain(domain)
+            attached_contact_domain = expression.AND(
+                (domain, [("contact_type", "=", "attached")])
+            )
+            attached_contacts = self.search(attached_contact_domain)
+            domain = expression.OR(
+                (
+                    expression.AND(([("contact_type", "=", "standalone")], domain)),
+                    [("other_contact_ids", "in", attached_contacts.ids)],
+                )
+            )
+        return super().read_group(domain, fields, groupby, offset=offset, limit=limit, orderby=orderby, lazy=lazy)
